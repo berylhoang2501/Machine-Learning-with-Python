@@ -78,11 +78,36 @@ PP hiện tại: data nhiều -> mô hình phân tích càng chính xác-> phân
 
 ## Phân loại 
 
-- supervised learning
+- supervised learning: học có giám sát
 
-- unsupervised learning
+ thường thì supervised learning sẽ đưa ra kết quả chính xác hơn 
 
-- semi-supervised learning
+ VD: Regression(đầu ra y là biến continous không giới hạn), Classification(đầu ra y là biến categorical giới hạn)
+
+- unsupervised learning: học không giám sát
+
+ VD: clustering(
+
+- semi-supervised learning: học bán giám sát
+
+- reinforcement learning
+
+<img width="1118" alt="Ảnh màn hình 2024-07-26 lúc 17 35 20" src="https://github.com/user-attachments/assets/e6be5c25-1225-4116-b5a6-6b394613ad15">
+
+### When Do We Use Machine Learning?
+
+ML is used when:
+
+• Human expertise does not exist (navigating on Mars)
+
+• Humans can’t explain their expertise (speech recognition) 
+
+ML có thể đưa ra được lời giải thích cho những vấn đề con người không thể giải thích 
+
+• Models must be customized (personalized medicine)
+
+• Models are based on huge amounts of data (genomics)
+
 
 ## Thách thức của Machine Learning 
 
