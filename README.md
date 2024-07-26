@@ -178,3 +178,39 @@ khi chúng ta dự đoán 1 mẫu chưa từng tồn tại trong data set thì s
 
 
 ## 5. Xây dựng Naive Bayes sử dụng sklearn
+
+**Bước 1: EDA**
+
+- data, bài toán dễ hay khó
+
+**Bước 2: Huấn luận mô hình trên tập trainning**
+
+**Bước 3: Test**
+
+### Naive Bayes Tutorial (text)
+
+- Xem phân phối nhãn .valuecounts -> visualize thấy đc dữ liệu balanced/imbalanced
+
+Nếu imbalanced thì phải tìm cách khắc phục vì sẽ gây ra model bias 
+
+- xem xét dữ liệu trùng .duplicated
+
+trong trường hợp bị duplicated , xem xét thêm nhãn của nó có consistant với nhau không, nếu chúng consistant với nhau thì có thể bỏ 
+
+- xem statistic của từng mẫu
+
+- showing word cloud
+
+- import nltk là package xử lý ngôn ngữ tự nhiên
+
+- Chuyển dữ liệu từ text thành bảng số để mô hình có thể đọc và hiểu bằng CountVectorizer
+
+**Lưu ý**
+
+ở tập train dùng fit transfrom , tập test dùng transform 
+
+nếu dùng fit trên tập test thì sẽ bị trường hợp bias và data leaked
+
+- from sklearn.naive_bayes import MultinomialNB
+
+- kỹ thuật TF-IDF 
