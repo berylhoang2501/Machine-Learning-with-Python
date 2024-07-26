@@ -42,9 +42,9 @@ Có 2 trường phái xử lý dữ liệu
 
 # Achievement
 
-# Buổi học 1: Tổng quan Machine Learning (26/07/2024)
+# Buổi học 1: Tổng quan Machine Learning (24/07/2024)
 
-## Giới thiệu 
+## 1. Giới thiệu 
 
 - Machine learning và AI khác nhau ntn?
 
@@ -76,7 +76,7 @@ PP hiện tại: data nhiều -> mô hình phân tích càng chính xác-> phân
 
 <img width="1086" alt="Ảnh màn hình 2024-07-26 lúc 17 24 24" src="https://github.com/user-attachments/assets/75117950-5a29-492a-a4cc-471c908318b0">
 
-## Phân loại 
+## 2. Phân loại 
 
 - supervised learning: học có giám sát
 
@@ -109,11 +109,26 @@ ML có thể đưa ra được lời giải thích cho những vấn đề con n
 • Models are based on huge amounts of data (genomics)
 
 
-## Thách thức của Machine Learning 
+## 3. Thách thức của Machine Learning 
 
-## Thuật ngữ 
+## 4. Thuật ngữ 
 
-## Làm việc với dự án Machine Learning 
+## 5. Làm việc với dự án Machine Learning 
 
-## Môi trường làm việc
+## 6. Môi trường làm việc
 
+# Buổi học 2: Supervised Learning- Naïve Bayes (26/07/2024)
+
+https://www.kaggle.com/code/ericle3121/naive-bayes-tutorial-from-beginning-tunning?scriptVersionId=189701710
+
+https://monkeylearn.com/blog/what-is-tf-idf/?authuser=0
+
+## 1. Classification
+
+## 2. Giới thiệu Naïve Bayes 
+
+## 3. Thuật toán
+
+## 4. Ưu/khuyết điểm
+
+## 5. Xây dựng Naive Bayes sử dụng sklearn
