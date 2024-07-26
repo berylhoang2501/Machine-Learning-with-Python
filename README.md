@@ -123,12 +123,59 @@ https://www.kaggle.com/code/ericle3121/naive-bayes-tutorial-from-beginning-tunni
 
 https://monkeylearn.com/blog/what-is-tf-idf/?authuser=0
 
+### Probability 
+
+- p(A): xác xuất diễn ra sự kiện A 
+
+- p(A/B): xác xuất có điều kiện A xảy ra, giả sử rằng B đã done (conditional probility)
+
+- p(A,B): xác xuất để A và B xảy ra đồng thời 
+
 ## 1. Classification
+
+- Classification là Supervised
+  
+### Phân loại 
 
 ## 2. Giới thiệu Naïve Bayes 
 
+- hoạt động khi biến output là biến categorical
+
+- trong trường hợp biến output là continous thì phỉa thay bằng
+
+<img width="1059" alt="Ảnh màn hình 2024-07-26 lúc 19 31 06" src="https://github.com/user-attachments/assets/8c7f1640-61f6-4777-bab7-9717c30f499d">
+
 ## 3. Thuật toán
 
+### 1 số ứng dụng phổ biến có thể kể đến như 
+
+- text classification (vd: phân loại bình luận, lọc thư rác,...)
+
+- Bayesian Classification
+
+- handwritten digit recognition
+
+![Ảnh màn hình 2024-07-26 lúc 18 38 31](https://github.com/user-attachments/assets/eebcb6a0-490d-4627-a1a6-f9cded673e45)
+
+### The Naïve Bayes Assumption
+
+<img width="983" alt="Ảnh màn hình 2024-07-26 lúc 19 38 17" src="https://github.com/user-attachments/assets/b46c9bd9-d546-42df-a7c5-6aee659d1c13">
+
+- Khuyết điểm:
+
+Trong thực tế, giả định này thường không đúng vì các đặc trưng có thể có mối quan hệ phụ thuộc lẫn nhau.
+
+Chỉ cần 1 cái bằng không thì kết quả tổng thể sẽ bị sai dù đã có cơ chế 
+
+Không xem xét và không coi trọng trật tự các từ trong câu (do thuật toán có tính giao hoán)
+
 ## 4. Ưu/khuyết điểm
+
+- Khuyết điểm:
+
+khi chúng ta dự đoán 1 mẫu chưa từng tồn tại trong data set thì sẽ ra kq = 0.
+
+<img width="1013" alt="Ảnh màn hình 2024-07-26 lúc 19 22 31" src="https://github.com/user-attachments/assets/fe056f35-937a-440b-ad3c-bbb9ae7f8e76">
+
 
 ## 5. Xây dựng Naive Bayes sử dụng sklearn
