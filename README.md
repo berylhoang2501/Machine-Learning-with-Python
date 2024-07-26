@@ -40,5 +40,31 @@ Có 2 trường phái xử lý dữ liệu
 
 - có điểm cộng khi tham gia đầy đủ vào các lớp học. có điểm engagement
 
-# Achievement 
+# Achievement
+
+# Buổi học 1: Tổng quan Machine Learning (26/07/2024)
+
+## Giới thiệu 
+
+- Machine learning và AI khác nhau ntn?
+
+AI là trí tuệ nhân tạo, là hệ thống máy móc có suy nghĩ như con ngừoi. Machine learning là máy móc để tạo ra AI
+
+2 hướng tiếp cận: instruction (traditional) và data driven (đây là hướng tiếp cận của machine learning)
+
+- Vì sao để đào tạo AI có nhiều phương pháp nhưng vào ngày nay thì machine learning lại phổ biến hơn?
+
+PP cổ điển: Khi chúng ta triển khai thực tế thì bảng hướng dẫn không thể bao gồm tất cả các tình huống xảy ra trong thực tế -> khi AI gặp tình huống k có trong tập hướng dẫn này thì sẽ bị đứng im. (Những pp cổ điển có tính tổng quát hoá generalization không cao 
+
+
+
+## Phân loại 
+
+## Thách thức của Machine Learning 
+
+## Thuật ngữ 
+
+## Làm việc với dự án Machine Learning 
+
+## Môi trường làm việc
 
