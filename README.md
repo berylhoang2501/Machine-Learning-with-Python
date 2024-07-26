@@ -161,19 +161,18 @@ https://monkeylearn.com/blog/what-is-tf-idf/?authuser=0
 
 <img width="983" alt="Ảnh màn hình 2024-07-26 lúc 19 38 17" src="https://github.com/user-attachments/assets/b46c9bd9-d546-42df-a7c5-6aee659d1c13">
 
-- Khuyết điểm:
-
-Trong thực tế, giả định này thường không đúng vì các đặc trưng có thể có mối quan hệ phụ thuộc lẫn nhau.
-
-Chỉ cần 1 cái bằng không thì kết quả tổng thể sẽ bị sai dù đã có cơ chế 
-
-Không xem xét và không coi trọng trật tự các từ trong câu (do thuật toán có tính giao hoán)
 
 ## 4. Ưu/khuyết điểm
 
 - Khuyết điểm:
 
-khi chúng ta dự đoán 1 mẫu chưa từng tồn tại trong data set thì sẽ ra kq = 0.
+Trong thực tế, giả định này thường không đúng vì các đặc trưng có thể có mối quan hệ phụ thuộc lẫn nhau.
+
+Chỉ cần 1 cái bằng không thì kết quả tổng thể sẽ bị sai dù đã có cơ chế Laplace smoothing 
+
+Không xem xét và không coi trọng trật tự các từ trong câu (do thuật toán có tính giao hoán)
+
+khi chúng ta dự đoán 1 mẫu chưa từng tồn tại trong data set thì sẽ ra kq = 0. Chúng ta sẽ cố gắng khắc phục bằng cơ chế Laplace smoothing 
 
 <img width="1013" alt="Ảnh màn hình 2024-07-26 lúc 19 22 31" src="https://github.com/user-attachments/assets/fe056f35-937a-440b-ad3c-bbb9ae7f8e76">
 
