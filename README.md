@@ -22,6 +22,23 @@ Có 2 trường phái xử lý dữ liệu
 
 - tăng tốc tính toán (sử dụng CPU)
 
-3) 
+3) Ở industry practice thì qtam đến yếu tố interactive and reliability
 
-- 
+- phải giái thích đc vì sao mô hình lại đưa ra quyết định như vậy. dựa trên thông tin và gợi ý gì.
+
+- ví dụ: fraud detection -> ví dụ khách hàng sử dụng mô hình không đc như ý gây ra những thiệt hại. AI không thể tự chịu trách nhiệm. Nhiệm vụ của chúng ta là đưa ra lời gt cho khách hàng
+
+4) Hệ thống khuyến nghị sản phẩm, tự động đề xuất cho kh những sp phù hợp
+
+5) build chatbot = chatgpt
+
+# Final exam
+
+- Case study: có 1 tập data set liên quan tới vấn đề có thật
+
+- Portfolio: small story telling (ex: tập dataset về khách hàng, sau khi phân tích thì kết quả phân tích phải đc sử dụng để phân loại khách hàng)
+
+- có điểm cộng khi tham gia đầy đủ vào các lớp học. có điểm engagement
+
+# Achievement 
+
