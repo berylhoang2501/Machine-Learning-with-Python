@@ -216,3 +216,5 @@ nếu dùng fit trên tập test thì sẽ bị trường hợp bias và data le
 - kỹ thuật TF-IDF 
 
 # Buổi học 3: Supervised Learning - K-Nearest Neighbors (28/07/2024)
+
+https://www.gradio.app/guides/quickstart?authuser=1
