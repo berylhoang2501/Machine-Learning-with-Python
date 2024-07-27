@@ -117,7 +117,7 @@ ML có thể đưa ra được lời giải thích cho những vấn đề con n
 
 ## 6. Môi trường làm việc
 
-# Buổi học 2: Supervised Learning- Naïve Bayes (26/07/2024)
+# Buổi học 2: Supervised Learning - Naïve Bayes (26/07/2024)
 
 https://www.kaggle.com/code/ericle3121/naive-bayes-tutorial-from-beginning-tunning?scriptVersionId=189701710
 
@@ -214,3 +214,5 @@ nếu dùng fit trên tập test thì sẽ bị trường hợp bias và data le
 - from sklearn.naive_bayes import MultinomialNB
 
 - kỹ thuật TF-IDF 
+
+# Buổi học 3: Supervised Learning - K-Nearest Neighbors (28/07/2024)
