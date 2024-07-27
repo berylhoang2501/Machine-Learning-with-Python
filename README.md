@@ -215,7 +215,11 @@ nếu dùng fit trên tập test thì sẽ bị trường hợp bias và data le
 
 - from sklearn.naive_bayes import MultinomialNB
 
-- kỹ thuật TF-IDF 
+- from sklearn.feature_extraction.text import TfidfVectorizer (đổi từ CountVectorizer -> TfidfVectorizer)
+
+- kỹ thuật TF-IDF (TF-IDF cao có nghĩa là 1 từ xuất hiện nhiều lần trong văn bản hiện tại, và xuất hiện rất ít trong những văn bản khác -> đó thường là từ đặc trưng của chuyên ngành đó)
+
+1 từ có TF-IDF càng cao thì càng là từ quan trọng và đặc trưng
 
 # Buổi học 3: Supervised Learning - K-Nearest Neighbors (28/07/2024)
 
