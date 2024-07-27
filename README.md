@@ -123,6 +123,8 @@ https://www.kaggle.com/code/ericle3121/naive-bayes-tutorial-from-beginning-tunni
 
 https://monkeylearn.com/blog/what-is-tf-idf/?authuser=0
 
+https://machinelearningcoban.com
+
 ### Probability 
 
 - p(A): xác xuất diễn ra sự kiện A 
@@ -187,15 +189,15 @@ khi chúng ta dự đoán 1 mẫu chưa từng tồn tại trong data set thì s
 
 **Bước 3: Test**
 
-### Naive Bayes Tutorial (text)
+### Naive Bayes Tutorial (Naive Bayes Tutorial: From Beginning -> Tunning)
 
-- Xem phân phối nhãn .valuecounts -> visualize thấy đc dữ liệu balanced/imbalanced
+- Xem phân phối nhãn .valuecounts -> có thể visualize thấy đc dữ liệu balanced/imbalanced
 
 Nếu imbalanced thì phải tìm cách khắc phục vì sẽ gây ra model bias 
 
 - xem xét dữ liệu trùng .duplicated
 
-trong trường hợp bị duplicated , xem xét thêm nhãn của nó có consistant với nhau không, nếu chúng consistant với nhau thì có thể bỏ 
+trong trường hợp bị duplicated , xem xét thêm nhãn của nó có consistant với nhau không, nếu chúng consistant với nhau thì nên giữ lại
 
 - xem statistic của từng mẫu
 
