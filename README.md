@@ -136,7 +136,17 @@ ML có thể đưa ra được lời giải thích cho những vấn đề con n
 
 ### Training vs. Test Distribution
 
+- Tập train và tập test phải có cùng 1 distribution thì mô hình mới có kq dự đoán tốt nhất được
+  
 ## 3. Thách thức của Machine Learning 
+
+- Không đủ số lượng dữ liệu đào tạo (training data)
+
+- Dữ liệu đào tạo không đại diện (nonrepresentative)
+
+sampling bias, survival bias
+
+- Dữ liệu có chất lượng kém (Poor-Quality Data)
 
 ## 4. Thuật ngữ 
 
@@ -204,7 +214,6 @@ Không xem xét và không coi trọng trật tự các từ trong câu (do thu�
 khi chúng ta dự đoán 1 mẫu chưa từng tồn tại trong data set thì sẽ ra kq = 0. Chúng ta sẽ cố gắng khắc phục bằng cơ chế Laplace smoothing 
 
 <img width="1013" alt="Ảnh màn hình 2024-07-26 lúc 19 22 31" src="https://github.com/user-attachments/assets/fe056f35-937a-440b-ad3c-bbb9ae7f8e76">
-
 
 ## 5. Xây dựng Naive Bayes sử dụng sklearn
 
