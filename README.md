@@ -250,7 +250,6 @@ https://machinelearningcoban.com
 
 <img width="983" alt="Ảnh màn hình 2024-07-26 lúc 19 38 17" src="https://github.com/user-attachments/assets/b46c9bd9-d546-42df-a7c5-6aee659d1c13">
 
-
 ## 4. Ưu/khuyết điểm
 
 - Khuyết điểm:
