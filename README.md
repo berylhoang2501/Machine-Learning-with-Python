@@ -78,19 +78,37 @@ PP hiện tại: data nhiều -> mô hình phân tích càng chính xác-> phân
 
 ## 2. Phân loại 
 
-- supervised learning: học có giám sát
+**1. supervised learning: học có giám sát**
+
+ – Given: training data + desired outputs (labels)
 
  thường thì supervised learning sẽ đưa ra kết quả chính xác hơn 
 
- VD: Regression(đầu ra y là biến continous không giới hạn), Classification(đầu ra y là biến categorical giới hạn)
+- Thường sẽ có 2 dạng thuật toán trong học có giám sát là Regression(đầu ra y là biến continous có thể có vô số giá trị), Classification(đầu ra y là biến categorical hữu hạn các giá trị có thể có)
 
-- unsupervised learning: học không giám sát
+- Regression là bài toán dự đoán 1 giá trị 
 
- VD: clustering(
+<img width="855" alt="Ảnh màn hình 2024-07-28 lúc 08 27 50" src="https://github.com/user-attachments/assets/ce0db7e0-58ad-4305-80a6-020f92497297">
 
-- semi-supervised learning: học bán giám sát
+VD về bài toán Regression: dự đoán giá nhà, dự đoán điểm của sinh viên,...
 
-- reinforcement learning
+VD về bài toán  Classification: phân biệt 1 email là spam hay k spam, phân biệt review positive/
+
+**2. unsupervised learning: học không giám sát**
+
+– Given: training data (without desired outputs)
+
+dữ liệu chưa đc đánh nhãn, dữ liệu mà chính chúng ta cũng chưa đưa ra lời giải thích dc (ví dụ như khám phá sao hả
+
+ VD: sử dụng clustering(customer segmentation, market segmentation, social network analysis,..)
+
+**3. semi-supervised learning: học bán giám sát**
+
+– Given: training data + a few desired outputs
+
+**4. reinforcement learning**
+
+– Rewards from sequence of actions
 
 <img width="1118" alt="Ảnh màn hình 2024-07-26 lúc 17 35 20" src="https://github.com/user-attachments/assets/e6be5c25-1225-4116-b5a6-6b394613ad15">
 
@@ -108,6 +126,15 @@ ML có thể đưa ra được lời giải thích cho những vấn đề con n
 
 • Models are based on huge amounts of data (genomics)
 
+### Designing a Learning System (Những thứ cần biết trước quá trình huấn luyện mô hình)
+
+- Choose the training experience (có đầy đủ data)
+ 
+- Choose exactly what is to be learned (xác định rõ ràng đầu ra cần phải là gì để xác định chọn mô hình gì)
+
+![Ảnh màn hình 2024-07-28 lúc 08 50 43](https://github.com/user-attachments/assets/b95a57b0-c4d8-484b-8e77-c9fd97c9fa19)
+
+### Training vs. Test Distribution
 
 ## 3. Thách thức của Machine Learning 
 
