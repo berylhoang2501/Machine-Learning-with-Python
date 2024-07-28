@@ -148,11 +148,61 @@ sampling bias, survival bias
 
 - Dữ liệu có chất lượng kém (Poor-Quality Data)
 
+missing data, irrelevant feature, duplicate 
+
+- Thuộc tính không liên quan (Irrelevant Feature)
+
+- Overfitting dữ liệu huấn luyện: train tốt test lỏm
+
+ mô hình sensitive to noise, mức chênh lệch giữa dự đoán và thực tế rất lớn 
+
+Nguyên nhân: Điều này xảy ra khi tập dữ liệu huấn luyện có nhiễu (noise), hay mô hình quá phức tạp, tức là có quá nhiều tham số so với số dữ liệu quan sát được (thể hiện). Chính nhiễu đã gây tác động xấu tới quá trình dự đoán của mô hình với dữ liệu kiểm tra.
+
+Cách sửa: Giảm nhiểu trong dữ liệu đào tạo, đơn gỉan hoá mô hình
+
+- Underfitting dữ liệu huấn luyện: train lỏm test lỏm
+
+Nguyên nhân: Điều này xảy xa khi mô hình đang xây dựng quá đơn giản so với tập dữ liệu.
+
+![Ảnh màn hình 2024-07-28 lúc 09 20 51](https://github.com/user-attachments/assets/efc89313-afdf-4a0f-b6e6-5457739cd174)
+
+bias là độ lệch giữa dự đoán của mô hình machine learning đưa ra so với thực tế, variance là độ phân tán của dữ liệu 
+
+### Trade-off
+
+<img width="683" alt="Ảnh màn hình 2024-07-28 lúc 09 22 20" src="https://github.com/user-attachments/assets/38695567-e590-4f71-9cb3-1ed41b90a7d3">
+
+bias và variance có tính trade off
+
 ## 4. Thuật ngữ 
+
+- Sample (mẫu): row, record, example, instance, observation
+
+<img width="633" alt="Ảnh màn hình 2024-07-28 lúc 09 23 36" src="https://github.com/user-attachments/assets/0e938029-4b80-41f4-8470-613fe867e72c">
+
+- variable(biến): attribute, field, feature, column, dimension
+
+- Data type (kiểu dữ liệu):
+
+<img width="682" alt="Ảnh màn hình 2024-07-28 lúc 09 25 14" src="https://github.com/user-attachments/assets/e007eaf9-5c7d-43b1-bff6-2bf793d64277">
 
 ## 5. Làm việc với dự án Machine Learning 
 
+<img width="655" alt="Ảnh màn hình 2024-07-28 lúc 09 25 43" src="https://github.com/user-attachments/assets/a7a5093e-c504-4e3e-8ef6-3df14424e453">
+
+- Có khá nhiều nguồn có thể nhận dữ liệu (miễn phí/ trả phí) như:
+
+UC Irvine Machine Learning Repository
+
+Kaggle datasets
+
+Amazon's AWS datasets
+
+Wikipedia's list of Machine Learning datasets
+
 ## 6. Môi trường làm việc
+
+Python, Scikit-learn
 
 # Buổi học 2: Supervised Learning - Naïve Bayes (26/07/2024)
 
