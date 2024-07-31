@@ -350,6 +350,7 @@ Với classification, ouput là class dựa trên KNN trong training data. Với
 
 ![Uploading Ảnh màn hình 2024-07-31 lúc 19.02.05.png…]()
 
+weigh = uni..
 
 ## 3. Ưu/khuyết điểm
 
@@ -367,3 +368,9 @@ biệt giữa hàng xóm gần nhất và xa nhất.
 - ảnh hưởng bởi phân phối 
 
 ## 4. Xây dựng KNN sử dụng sklearn
+
+- cải thiện bằng cách tăng chất lượng dataset (generate/collect, crawl dữ liệu, synthetic,...)
+
+synthetic là sinh ra mẫu ão, hay còn gọi là augmentic đối với mẫu ảnh (ví dụ có thể flip, rotate lại độ để add vô dataset ban đầu để làm cho data set này tăng lên 
+
+https://www.kaggle.com/datasets/crawford/emnist?select=emnist-mnist-test.csv
