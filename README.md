@@ -309,3 +309,61 @@ nếu dùng fit trên tập test thì sẽ bị trường hợp bias và data le
 # Buổi học 3: Supervised Learning - K-Nearest Neighbors (28/07/2024)
 
 https://www.gradio.app/guides/quickstart?authuser=1
+
+K-Nearest Neighbors (KNN) là một thuật toán thuộc nhóm Supervised Learning được sử dụng cho classification và regression.
+
+Với classification, ouput là class dựa trên KNN trong training data. Với regression, output là trung bình các giá trị của target variable dựa trên KNN trong training data
+
+## 1. Giới thiệu
+
+- Regression analysis là một dạng của kỹ thuật mô hình tiên đoán (predictive modelling technique)
+
+- dự đoán ra output là giá trị thật thuộc R, có thể có vô số các giá trị có thể có
+
+- cần data đã đc lable sẵn
+
+- predict: dự đoán -> bao gồm tất cả các dự đoán
+
+- forecast: dự báo, tiên đoán -> dự báo những gì chưa xảy ra
+
+## 2.Thuật toán
+
+- dựa trên quy tắc major voting (đi theo số đông)
+
+**Q1: k = ? thì tốt?**
+
+- giá trị k nhỏ sẽ gây ra overfitting. Vì chỉ dựa trên điểm gần nhất để đưa ra dự đoán -> chỉ cần một điểm dữ liệu lạ hoặc nhiễu là kết quả dự đoán có thể bị ảnh hưởng mạnh
+
+- chọn k phải là số lẻ
+
+- k khác 1, k khác N
+
+- phải khảo sát k = (3,5,7,...) -> giá trị nào tốt trên tập validation thì chọn
+
+**Q2: phép đo distance có đk nào không?**
+
+- gặp KNN thì phải scale dữ liệu (biến continous)
+
+- biến categorical thì làm như sau
+ 
+![Ảnh màn hình 2024-07-31 lúc 18 43 47](https://github.com/user-attachments/assets/01074e56-8cb8-4aee-bf95-543bbb770a66)
+
+![Uploading Ảnh màn hình 2024-07-31 lúc 19.02.05.png…]()
+
+
+## 3. Ưu/khuyết điểm
+
+**Ưu điểm**
+
+- có thể tự viết công thức tính khoảng cách, miễn là thoả mãn 3 điều kiện sau
+
+**Khuyết điểm**
+
+- cruise of high dimensionality
+
+khi khảo sát 1 tập dữ liệu quá lớn thì Độ chính xác của KNN có thể bị suy giảm nghiêm trọng với dữ liệu kích thước cao do có rất ít sự khác
+biệt giữa hàng xóm gần nhất và xa nhất.
+
+- ảnh hưởng bởi phân phối 
+
+## 4. Xây dựng KNN sử dụng sklearn
