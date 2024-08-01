@@ -351,13 +351,12 @@ Với classification, ouput là class dựa trên KNN trong training data. Với
 
 **Q2: phép đo distance có đk nào không?**
 
-- gặp KNN thì phải scale dữ liệu (biến continous)
+- gặp KNN thì phải scale dữ liệu (biến continous) (để đảm bảo rằng tất cả các đặc trưng được đối xử công bằng trong quá trình tính toán khoảng cách, từ đó giúp thuật toán phân loại chính xác hơn. Nếu bỏ qua bước này, các đặc trưng với giá trị lớn hơn sẽ chi phối kết quả và làm cho mô hình kém hiệu quả.)
 
 - biến categorical thì làm như sau
  
 ![Ảnh màn hình 2024-07-31 lúc 18 43 47](https://github.com/user-attachments/assets/01074e56-8cb8-4aee-bf95-543bbb770a66)
 
-![Uploading Ảnh màn hình 2024-07-31 lúc 19.02.05.png…]()
 
 weigh = uni..
 
