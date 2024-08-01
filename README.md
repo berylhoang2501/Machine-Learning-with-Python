@@ -144,7 +144,7 @@ ML có thể đưa ra được lời giải thích cho những vấn đề con n
 
 - Dữ liệu đào tạo không đại diện (nonrepresentative)
 
-sampling bias, survival bias
+sampling bias (xảy ra khi mẫu được chọn không đại diện cho tổng thể, dẫn đến các kết quả nghiên cứu hoặc dự đoán bị sai lệch), survival bias
 
 - Dữ liệu có chất lượng kém (Poor-Quality Data)
 
