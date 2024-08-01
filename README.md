@@ -357,23 +357,26 @@ Với classification, ouput là class dựa trên KNN trong training data. Với
  
 ![Ảnh màn hình 2024-07-31 lúc 18 43 47](https://github.com/user-attachments/assets/01074e56-8cb8-4aee-bf95-543bbb770a66)
 
-
-weigh = uni..
-
 ## 3. Ưu/khuyết điểm
 
 **Ưu điểm**
 
 - có thể tự viết công thức tính khoảng cách, miễn là thoả mãn 3 điều kiện sau
 
+pt tính kcach khi tính khoảng cách giữa 2 điểm trùng nhau (A và chính nó) thì kết quả trả và phải bằng 0
+
+nguyên tắc đối xứng: dA,B = dB,
+
+positive: dA>=0
+
 **Khuyết điểm**
 
 - cruise of high dimensionality
 
-khi khảo sát 1 tập dữ liệu quá lớn thì Độ chính xác của KNN có thể bị suy giảm nghiêm trọng với dữ liệu kích thước cao do có rất ít sự khác
-biệt giữa hàng xóm gần nhất và xa nhất.
+khi khảo sát 1 tập dữ liệu có quá nhiều biến thì Độ chính xác của KNN có thể bị suy giảm nghiêm trọng với dữ liệu kích thước cao do có rất ít sự khác
+biệt giữa hàng xóm gần nhất và xa nhất. -> có thể làm cho mô hình KNN hoạt động không tốt 
 
-- ảnh hưởng bởi phân phối 
+- ảnh hưởng bởi data imbalance
 
 ## 4. Xây dựng KNN sử dụng sklearn
 
