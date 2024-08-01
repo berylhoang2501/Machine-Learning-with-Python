@@ -92,13 +92,13 @@ PP hiện tại: data nhiều -> mô hình phân tích càng chính xác-> phân
 
 VD về bài toán Regression: dự đoán giá nhà, dự đoán điểm của sinh viên,...
 
-VD về bài toán  Classification: phân biệt 1 email là spam hay k spam, phân biệt review positive/
+VD về bài toán  Classification: phân biệt 1 email là spam hay k spam, phân biệt review positive/negative
 
 **2. unsupervised learning: học không giám sát**
 
 – Given: training data (without desired outputs)
 
-dữ liệu chưa đc đánh nhãn, dữ liệu mà chính chúng ta cũng chưa đưa ra lời giải thích dc (ví dụ như khám phá sao hả
+dữ liệu chưa đc đánh nhãn, dữ liệu mà chính chúng ta cũng chưa đưa ra lời giải thích dc (ví dụ như khám phá sao hoả 
 
  VD: sử dụng clustering(customer segmentation, market segmentation, social network analysis,..)
 
