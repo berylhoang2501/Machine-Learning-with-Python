@@ -345,7 +345,7 @@ Với classification, ouput là class dựa trên KNN trong training data. Với
 
 - chọn k phải là số lẻ
 
-- k khác 1, k khác N
+- k != 1, k != N
 
 - phải khảo sát k = (3,5,7,...) -> giá trị nào tốt trên tập validation thì chọn
 
