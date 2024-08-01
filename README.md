@@ -304,7 +304,12 @@ nếu dùng fit trên tập test thì sẽ bị trường hợp bias và data le
 
 - kỹ thuật TF-IDF (TF-IDF cao có nghĩa là 1 từ xuất hiện nhiều lần trong văn bản hiện tại, và xuất hiện rất ít trong những văn bản khác -> đó thường là từ đặc trưng của chuyên ngành đó)
 
-1 từ có TF-IDF càng cao thì càng là từ quan trọng và đặc trưng
+- 1 từ có TF-IDF càng cao thì càng là từ quan trọng và đặc trưng
+
+Giả sử trong các review tích cực, từ "good" và "excellent" xuất hiện thường xuyên, trong khi trong review tiêu cực, từ "bad" và "terrible" lại phổ biến hơn.
+
+TF-IDF sẽ giúp mô hình Naive Bayes nhận ra rằng "good" và "excellent" quan trọng hơn "the" hoặc "is" trong việc phân loại review thành tích cực, và tương tự với "bad" và "terrible" trong review tiêu cực.
+
 
 <img width="336" alt="Ảnh màn hình 2024-07-28 lúc 02 14 41" src="https://github.com/user-attachments/assets/912698f8-692f-495f-8eb1-358518cc86f4">
 
