@@ -349,6 +349,10 @@ Với classification, ouput là class dựa trên KNN trong training data. Với
 
 - phải khảo sát k = (3,5,7,...) -> giá trị nào tốt trên tập validation thì chọn
 
+- tìm optimal k: khảo sát trên 1 tập k và với mỗi giá trị k ghi lại train error và test error
+
+![Ảnh màn hình 2024-08-02 lúc 00 32 30](https://github.com/user-attachments/assets/9646a0a3-5821-4adf-bc10-0d1f34b6f9a5)
+
 **Q2: phép đo distance có đk nào không?**
 
 - gặp KNN thì phải scale dữ liệu (biến continous) (để đảm bảo rằng tất cả các đặc trưng được đối xử công bằng trong quá trình tính toán khoảng cách, từ đó giúp thuật toán phân loại chính xác hơn. Nếu bỏ qua bước này, các đặc trưng với giá trị lớn hơn sẽ chi phối kết quả và làm cho mô hình kém hiệu quả.)
