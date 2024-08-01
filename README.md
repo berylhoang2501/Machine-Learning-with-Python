@@ -306,6 +306,10 @@ nếu dùng fit trên tập test thì sẽ bị trường hợp bias và data le
 
 1 từ có TF-IDF càng cao thì càng là từ quan trọng và đặc trưng
 
+<img width="336" alt="Ảnh màn hình 2024-07-28 lúc 02 14 41" src="https://github.com/user-attachments/assets/912698f8-692f-495f-8eb1-358518cc86f4">
+
+<img width="341" alt="Ảnh màn hình 2024-07-28 lúc 02 14 47" src="https://github.com/user-attachments/assets/2a94d71f-ef47-4194-91d9-f5c5b425a17b">
+
 # Buổi học 3: Supervised Learning - K-Nearest Neighbors (28/07/2024)
 
 https://www.gradio.app/guides/quickstart?authuser=1
