@@ -389,3 +389,49 @@ biệt giữa hàng xóm gần nhất và xa nhất. -> có thể làm cho mô h
 synthetic là sinh ra mẫu ão, hay còn gọi là augmentic đối với mẫu ảnh (ví dụ có thể flip, rotate lại độ để add vô dataset ban đầu để làm cho data set này tăng lên 
 
 https://www.kaggle.com/datasets/crawford/emnist?select=emnist-mnist-test.csv
+
+# Buổi học 4: Supervised Learning - Linear Regression và Gradient Descent (2/08/2024)
+
+# Gradient Descent
+
+## 1. Caculus
+
+- đạo hàm là rate of change
+  
+<img width="1051" alt="Ảnh màn hình 2024-08-02 lúc 18 38 29" src="https://github.com/user-attachments/assets/5a965220-b860-482f-84f7-cde81bcd6809">
+
+## 2. Gradient Descent trong Python
+
+- Thuật toán này dùng để tối ưu hoá 1 hàm số nào đó bằng cách sử dụng đạo hàm
+
+- Gradient descent là xương sống của các thuật toán Machine Learning.
+
+<img width="390" alt="Ảnh màn hình 2024-08-02 lúc 18 43 31" src="https://github.com/user-attachments/assets/f928a24c-64b9-43b9-bf68-eea70167ca21">
+
+![Ảnh màn hình 2024-08-02 lúc 18 45 59](https://github.com/user-attachments/assets/8cf25517-a0d0-4887-bbf1-18a6a4b718e9)
+
+# Linear Regression
+
+## 1. Regression Analysis
+## 2. Đánh giá mô hình Regression
+
+<img width="879" alt="Ảnh màn hình 2024-08-02 lúc 19 08 41" src="https://github.com/user-attachments/assets/603e5bf2-0493-4c9f-a51f-3dfeee0aff98">
+
+đối với những bài toán có range khác nhau 
+
+<img width="685" alt="Ảnh màn hình 2024-08-02 lúc 19 10 58" src="https://github.com/user-attachments/assets/5ceaa152-dc4c-41cf-9dbc-c6253e0f984b">
+
+<img width="877" alt="Ảnh màn hình 2024-08-02 lúc 19 13 08" src="https://github.com/user-attachments/assets/b0f204c7-4a86-4da4-b5ba-53b685ee143d">
+
+## 3. Linear regression
+
+- có thể dùng close form (công thức có sẵn) hoặc gradient decent để tính
+
+## 4. Polynomial Regression
+
+<img width="893" alt="Ảnh màn hình 2024-08-02 lúc 19 22 44" src="https://github.com/user-attachments/assets/5d21c9b9-c29e-445e-80e9-ea78f628d5bf">
+
+ - giúp giải quyết vde của liner regression thông thường, thể hiện đc mối quan hệ phi tuyến tính
+
+## 5. Multicol linearity
+
