@@ -439,4 +439,18 @@ https://www.kaggle.com/datasets/crawford/emnist?select=emnist-mnist-test.csv
 
 <img width="424" alt="Ảnh màn hình 2024-08-02 lúc 19 31 48" src="https://github.com/user-attachments/assets/391fcbfe-12f1-43b4-a6d4-ce883b8b0add">  <img width="421" alt="Ảnh màn hình 2024-08-02 lúc 19 32 00" src="https://github.com/user-attachments/assets/a5861aff-ba2f-4a72-a6e9-41efa8c1b78e">
 
+## DEMO
 
+https://www.kaggle.com/code/deanmendes/linear-regression-usa-housing?authuser=0
+
+- nên áp dụng normalize với linear regression -> cơ sở công bằng để đánh giá ảnh hưởng của từng biến lên mô hình
+
+- residual plot là kĩ thuật để nhận ra giũa các biến này với biến target có mỗi quan hệ tuyến tính hay không \
+
+## techtalks
+
+- Personality Indentification using Deep Learning
+
+- Face Recognition
+  
+- AUC-ROC curve & ứng dụng
