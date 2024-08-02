@@ -390,6 +390,10 @@ synthetic là sinh ra mẫu ão, hay còn gọi là augmentic đối với mẫu
 
 https://www.kaggle.com/datasets/crawford/emnist?select=emnist-mnist-test.csv
 
+<img width="551" alt="Ảnh màn hình 2024-07-31 lúc 20 35 35" src="https://github.com/user-attachments/assets/031459b7-fb2b-4737-9c36-fe35213f5324">
+
+<img width="555" alt="Ảnh màn hình 2024-07-31 lúc 20 35 50" src="https://github.com/user-attachments/assets/43c4bef4-7d53-494e-bde2-e18002ca4c0c">
+
 # Buổi học 4: Supervised Learning - Linear Regression và Gradient Descent (2/08/2024)
 
 # Gradient Descent
@@ -434,4 +438,9 @@ https://www.kaggle.com/datasets/crawford/emnist?select=emnist-mnist-test.csv
  - giúp giải quyết vde của liner regression thông thường, thể hiện đc mối quan hệ phi tuyến tính
 
 ## 5. Multicol linearity
+
+<img width="524" alt="Ảnh màn hình 2024-08-02 lúc 19 31 48" src="https://github.com/user-attachments/assets/391fcbfe-12f1-43b4-a6d4-ce883b8b0add">
+
+<img width="521" alt="Ảnh màn hình 2024-08-02 lúc 19 32 00" src="https://github.com/user-attachments/assets/a5861aff-ba2f-4a72-a6e9-41efa8c1b78e">
+
 
