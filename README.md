@@ -544,7 +544,8 @@ https://www.kaggle.com/code/alexisbcook/pipelines?authuser=0
 
 ghép những step trong preprocessing, step trong mô hình vào chung 1 chỗ để cho code gọn hơn 
 
-<img width="493" alt="Ảnh màn hình 2024-08-04 lúc 10 04 30" src="https://github.com/user-attachments/assets/941e183a-59ce-442c-871a-6ed08432aa07">
+<img width="489" alt="Ảnh màn hình 2024-08-04 lúc 10 05 58" src="https://github.com/user-attachments/assets/11db227c-4567-4bee-91e1-a39398dc13f9">
+
 
 <img width="493" alt="Ảnh màn hình 2024-08-04 lúc 10 04 37" src="https://github.com/user-attachments/assets/982ade70-2a5f-4fa0-9b18-4b6dea8ad267">
 
