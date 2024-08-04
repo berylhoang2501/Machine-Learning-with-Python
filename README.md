@@ -454,3 +454,85 @@ https://www.kaggle.com/code/deanmendes/linear-regression-usa-housing?authuser=0
 - Face Recognition
   
 - AUC-ROC curve & ứng dụng
+
+# Buổi học 5: Supervised Learning - Logistic Regression + Pipeline & Pandas Profilling (4/08/2024)
+
+https://www.datacamp.com/tutorial/pandas-profiling-ydata-profiling-in-python-guide?authuser=0
+
+https://www.kdnuggets.com/2020/03/linear-logistic-regression-explained.html?authuser=0
+
+https://www.kaggle.com/code/ericle3121/logistic-regression-for-heart-disease-classificati
+
+https://www.kaggle.com/code/alexisbcook/pipelines?authuser=0
+
+- tên là regression nhưng chủ yếu để làm classification task
+
+## 1. Classification
+
+- biến output là biến categorical (hữu hạn gía trị có thể có)
+
+- classification là bài toán supervised (cần data có nhãn)
+
+**Phân loại**
+
+<img width="631" alt="Ảnh màn hình 2024-08-04 lúc 08 41 13" src="https://github.com/user-attachments/assets/b21d5f33-20db-4421-bfc7-9e228a21cb4b">
+
+## 2. Đánh giá mô hình Classification
+
+- cần có 2 thứ để đánh giá: giá trị thực ngoài đời và giá trị dự đoán
+
+giá trị thực (actual values–y) và giá trị dự báo (predicted values – y predict).
+
+**Các thang đo mô hình classification**
+
+<img width="585" alt="Ảnh màn hình 2024-08-04 lúc 08 43 09" src="https://github.com/user-attachments/assets/daf2cbb0-0d9c-46a8-abdf-d6b8468e01de">
+
+- Khi dữ liệu bị mất cân bằng (imbalanced data), accuracy để đánh giá sẽ không đáng tin 
+
+- Precision và Recall sử dụng trong trường hợp data bị imbalance
+
+Recall dùng khi tiêu chí đánh giá là "nhầm còn hơn sót" -> ví dụ dự đoán ngừoi đó có bị tiểu đường hay không. Trong 100 ngừoi bị tiểu đường thì mô hình dự đoán đúng bao nhiêu người 
+
+Precision thể hiện "độ tự tin" của mô hình. ví dụ trong 100 ngừoi bị tiểu thì 90% trong số đó là thực sự bị tiểu đường 
+
+-  F1score là metrics cân bàng giữa Precision và Recall . trường hợp muốn cân bằng cả 2 thì sử dụng F1score
+
+**ROC-AUC**
+
+- AUC càng cao thì càng tốt. AUC Càng cao thì mô hình càng robust
+
+- thầy có gưỉ tài liệu tham khảo AUC.
+
+**Visualize class data**
+
+![Ảnh màn hình 2024-08-04 lúc 08 57 07](https://github.com/user-attachments/assets/9416b81b-ee70-4ab6-bf8e-9b63e0123ebd)
+
+## 3. Logistic Regression
+
+<img width="933" alt="Ảnh màn hình 2024-08-04 lúc 08 57 48" src="https://github.com/user-attachments/assets/03567e0f-71c3-475d-b34b-827452195342">
+
+- Hàm sigmoid là hàm làm cho linear regression trở thành mô hình logistic regression (dự đoán ra 2 giá trị nằm trong khoảng 0 -> 1)
+
+![Ảnh màn hình 2024-08-04 lúc 09 03 42](https://github.com/user-attachments/assets/6ae68030-c55b-4836-afb6-73fc0f434987)
+
+**Ưu điểm**
+
+- Dễ dàng mở rộng cho bài toán target có nhiều hơn hai loại
+
+- Huấn luyện nhanh, độ chính xác cao cho nhiều tập dữ liệu đơn giản
+
+- Có thể giải thích các hệ số mô hình cũng như các chỉ số về tầm quan trọng của tính năng
+
+**Khuyết điểm**
+- Decision boundary: chỉ phân biệt  với trường hợp 2 nhãn là  linearly separable. đôi với đường non-linear thì hoạt động không tốt.
+
+<img width="604" alt="Ảnh màn hình 2024-08-04 lúc 09 05 29" src="https://github.com/user-attachments/assets/515f31ba-8ac9-4bda-907f-cbf592f31145">
+
+- cách để biết nhãn của mình có bị non linear không? 
+
+C1: cách thử: cứ áp dụng log regression, nếu làm k tốt -> non linear
+
+C2: dùng kỹ thuật pca để giảm không gian về 2 chiều và visualize
+
+## 4. Hiệu chỉnh ngưỡng (threshold) trong Classification
+
