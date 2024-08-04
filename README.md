@@ -509,7 +509,7 @@ Precision thể hiện "độ tự tin" của mô hình. ví dụ trong 100 ng�
 
 ## 3. Logistic Regression
 
-<img width="933" alt="Ảnh màn hình 2024-08-04 lúc 08 57 48" src="https://github.com/user-attachments/assets/03567e0f-71c3-475d-b34b-827452195342">
+<img width="833" alt="Ảnh màn hình 2024-08-04 lúc 08 57 48" src="https://github.com/user-attachments/assets/03567e0f-71c3-475d-b34b-827452195342">
 
 - Hàm sigmoid là hàm làm cho linear regression trở thành mô hình logistic regression (dự đoán ra 2 giá trị nằm trong khoảng 0 -> 1)
 
@@ -535,4 +535,16 @@ C1: cách thử: cứ áp dụng log regression, nếu làm k tốt -> non linea
 C2: dùng kỹ thuật pca để giảm không gian về 2 chiều và visualize
 
 ## 4. Hiệu chỉnh ngưỡng (threshold) trong Classification
+
+## 5. Pipelines
+
+https://www.kaggle.com/code/alexisbcook/pipelines?authuser=0
+
+- Pipelines are a simple way to keep your data preprocessing and modeling code organized.
+
+ghép những step trong preprocessing, step trong mô hình vào chung 1 chỗ để cho code gọn hơn 
+
+<img width="493" alt="Ảnh màn hình 2024-08-04 lúc 10 04 30" src="https://github.com/user-attachments/assets/941e183a-59ce-442c-871a-6ed08432aa07">
+
+<img width="493" alt="Ảnh màn hình 2024-08-04 lúc 10 04 37" src="https://github.com/user-attachments/assets/982ade70-2a5f-4fa0-9b18-4b6dea8ad267">
 
