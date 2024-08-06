@@ -408,18 +408,46 @@ https://www.kaggle.com/datasets/crawford/emnist?select=emnist-mnist-test.csv
 
 - Gradient descent là xương sống của các thuật toán Machine Learning.
 
-<img width="390" alt="Ảnh màn hình 2024-08-02 lúc 18 43 31" src="https://github.com/user-attachments/assets/f928a24c-64b9-43b9-bf68-eea70167ca21">
+![Ảnh màn hình 2024-08-06 lúc 22 28 12](https://github.com/user-attachments/assets/9aeb6e60-ed64-4afb-a25b-7da725099144)
 
-![Ảnh màn hình 2024-08-02 lúc 18 45 59](https://github.com/user-attachments/assets/8cf25517-a0d0-4887-bbf1-18a6a4b718e9)
+bước 3: update trọng số a và b sử dụng công thức sau 
+
+<img width="390" alt="Ảnh màn hình 2024-08-02 lúc 18 43 31" src="https://github.com/user-attachments/assets/f928a24c-64b9-43b9-bf68-eea70167ca21">
+
+**Cost (loss) function**
+
+ - đo mức độ sai khác mà mô hình dự đoán so với giá trị thật. 2 trọng số a và b cần tìm là tại 2 trọng số đó giá trị của hàm cost function |y'-y|^2 là nhỏ nhất. lúc đó sai số của mô hình đưa ra cũng là nhỏ nhất. bài toán trở thành bài toán tìm a và b sao cho hàm số đạt GTNN
+
+![Ảnh màn hình 2024-08-06 lúc 22 40 29](https://github.com/user-attachments/assets/15e8576a-09cd-414a-88ab-5330ac575dae)
+
+-  α là learning rate sẽ có ảnh hưởng đến tốc độ trượt xuống đáy
+
+learning rate quá nhỏ sẽ tốn thời gian lâu để tìm ra điểm cực tiểu của mô hình 
+
+learning rate quá lớn sẽ có khả năng đi lố -> bỏ qua điểm cực tiểu 
 
 # Linear Regression
 
 ## 1. Regression Analysis
 ## 2. Đánh giá mô hình Regression
 
+- Bài toán regression là bài toán đoán ra một output y nào đó có vô vàn giá trị thật (giá nhà, dự đoán nhu cầu của sản phẩm,..)
+
+- không dùng accuracy scrore để đánh giá hiệu quả của mô hình regression.
+
+**thay vào đó dùng các phép đo sau đây để đánh giá:**
+
 <img width="879" alt="Ảnh màn hình 2024-08-02 lúc 19 08 41" src="https://github.com/user-attachments/assets/603e5bf2-0493-4c9f-a51f-3dfeee0aff98">
 
-đối với những bài toán có range khác nhau 
+- tuy nhiên, 2 metrics này có 1 vấn đề đó là sẽ không chính xác đối với những bài toán có đơn vị khômg đồng nhất và range không khớp với nhau.
+
+- MSE, MAE chỉ dùng để so sánh sai số tuyệt đối
+
+**Những phép đo dựa trên giá trị phần trăm sẽ không bị ảnh hưởng**
+
+- Mean absolute percentage error
+
+![Ảnh màn hình 2024-08-06 lúc 23 35 03](https://github.com/user-attachments/assets/adf42b0b-fbc4-4652-89bc-edf0d74a33d5)
 
 <img width="685" alt="Ảnh màn hình 2024-08-02 lúc 19 10 58" src="https://github.com/user-attachments/assets/5ceaa152-dc4c-41cf-9dbc-c6253e0f984b">
 
@@ -427,11 +455,29 @@ https://www.kaggle.com/datasets/crawford/emnist?select=emnist-mnist-test.csv
 
 ## 3. Linear regression
 
-- có thể dùng close form (công thức có sẵn) hoặc gradient decent để tính
+- Thuật toán cơ bản thuộc nhóm Supervised Learning (Học có giám sát).
+ 
+- Được sử dụng rất rộng rãi trong Regression Analysis (Phân tích hồi quy).
+
+- Mô hình được “xây dựng” bằng cách sử dụng phương pháp Bình phương tối thiểu (Least Squares method).
+
+phuong pháp này có thể dùng close form (công thức có sẵn) hoặc gradient decent để tính
+
+**khuyết điểm**
+
+- rất nhạy cảm với nhiễu và cần phải giải quyết nhiễu trước khi làm liner regression
+
+![Ảnh màn hình 2024-08-06 lúc 23 47 18](https://github.com/user-attachments/assets/a37f7ea4-a6d6-4316-84b5-8685c8d84f2d)
+
+- đối với những mô hình phức tạp hơn thì không phù hợp để sử dụng mô hình liner regression 
 
 ## 4. Polynomial Regression
 
-<img width="893" alt="Ảnh màn hình 2024-08-02 lúc 19 22 44" src="https://github.com/user-attachments/assets/5d21c9b9-c29e-445e-80e9-ea78f628d5bf">
+- khác liner ở chỗ poly có bậc. có thể mô hình được môi quan hệ phi tuyến tính, ví dụ như:
+
+<img width="332" alt="Ảnh màn hình 2024-08-06 lúc 23 50 04" src="https://github.com/user-attachments/assets/c722789f-ff74-43f8-9889-ab945c400384">
+
+<img width="693" alt="Ảnh màn hình 2024-08-02 lúc 19 22 44" src="https://github.com/user-attachments/assets/5d21c9b9-c29e-445e-80e9-ea78f628d5bf">
 
  - giúp giải quyết vde của liner regression thông thường, thể hiện đc mối quan hệ phi tuyến tính
 
