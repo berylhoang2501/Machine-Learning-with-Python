@@ -110,7 +110,7 @@ dữ liệu chưa đc đánh nhãn, dữ liệu mà chính chúng ta cũng chưa
 
 – Rewards from sequence of actions
 
-<img width="88" alt="Ảnh màn hình 2024-07-26 lúc 17 35 20" src="https://github.com/user-attachments/assets/e6be5c25-1225-4116-b5a6-6b394613ad15">
+<img width="788" alt="Ảnh màn hình 2024-07-26 lúc 17 35 20" src="https://github.com/user-attachments/assets/e6be5c25-1225-4116-b5a6-6b394613ad15">
 
 ### When Do We Use Machine Learning?
 
