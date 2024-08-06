@@ -70,11 +70,11 @@ PP hiện tại: data nhiều -> mô hình phân tích càng chính xác-> phân
 
 ### Một số ứng dụng của ML
 
-<img width="744" alt="Ảnh màn hình 2024-07-26 lúc 17 24 14" src="https://github.com/user-attachments/assets/2cc25be9-5aed-4404-b01e-689d1e4a2a2e">
+<img width="644" alt="Ảnh màn hình 2024-07-26 lúc 17 24 14" src="https://github.com/user-attachments/assets/2cc25be9-5aed-4404-b01e-689d1e4a2a2e">
 
-<img width="737" alt="Ảnh màn hình 2024-07-26 lúc 17 24 19" src="https://github.com/user-attachments/assets/15aae597-ec5e-4783-8752-6bd4be461478">
+<img width="637" alt="Ảnh màn hình 2024-07-26 lúc 17 24 19" src="https://github.com/user-attachments/assets/15aae597-ec5e-4783-8752-6bd4be461478">
 
-<img width="986" alt="Ảnh màn hình 2024-07-26 lúc 17 24 24" src="https://github.com/user-attachments/assets/75117950-5a29-492a-a4cc-471c908318b0">
+<img width="786" alt="Ảnh màn hình 2024-07-26 lúc 17 24 24" src="https://github.com/user-attachments/assets/75117950-5a29-492a-a4cc-471c908318b0">
 
 ## 2. Phân loại 
 
@@ -110,7 +110,7 @@ dữ liệu chưa đc đánh nhãn, dữ liệu mà chính chúng ta cũng chưa
 
 – Rewards from sequence of actions
 
-<img width="1118" alt="Ảnh màn hình 2024-07-26 lúc 17 35 20" src="https://github.com/user-attachments/assets/e6be5c25-1225-4116-b5a6-6b394613ad15">
+<img width="88" alt="Ảnh màn hình 2024-07-26 lúc 17 35 20" src="https://github.com/user-attachments/assets/e6be5c25-1225-4116-b5a6-6b394613ad15">
 
 ### When Do We Use Machine Learning?
 
@@ -232,7 +232,7 @@ https://machinelearningcoban.com
 
 - trong trường hợp biến output là continous thì phỉa thay bằng
 
-<img width="1059" alt="Ảnh màn hình 2024-07-26 lúc 19 31 06" src="https://github.com/user-attachments/assets/8c7f1640-61f6-4777-bab7-9717c30f499d">
+<img width="809" alt="Ảnh màn hình 2024-07-26 lúc 19 31 06" src="https://github.com/user-attachments/assets/8c7f1640-61f6-4777-bab7-9717c30f499d">
 
 ## 3. Thuật toán
 
@@ -248,7 +248,7 @@ https://machinelearningcoban.com
 
 ### The Naïve Bayes Assumption
 
-<img width="983" alt="Ảnh màn hình 2024-07-26 lúc 19 38 17" src="https://github.com/user-attachments/assets/b46c9bd9-d546-42df-a7c5-6aee659d1c13">
+<img width="883" alt="Ảnh màn hình 2024-07-26 lúc 19 38 17" src="https://github.com/user-attachments/assets/b46c9bd9-d546-42df-a7c5-6aee659d1c13">
 
 ## 4. Ưu/khuyết điểm
 
@@ -437,7 +437,7 @@ learning rate quá lớn sẽ có khả năng đi lố -> bỏ qua điểm cực
 
 **thay vào đó dùng các phép đo sau đây để đánh giá:**
 
-<img width="879" alt="Ảnh màn hình 2024-08-02 lúc 19 08 41" src="https://github.com/user-attachments/assets/603e5bf2-0493-4c9f-a51f-3dfeee0aff98">
+<img width="779" alt="Ảnh màn hình 2024-08-02 lúc 19 08 41" src="https://github.com/user-attachments/assets/603e5bf2-0493-4c9f-a51f-3dfeee0aff98">
 
 - tuy nhiên, 2 metrics này có 1 vấn đề đó là sẽ không chính xác đối với những bài toán có đơn vị khômg đồng nhất và range không khớp với nhau.
 
@@ -451,7 +451,7 @@ learning rate quá lớn sẽ có khả năng đi lố -> bỏ qua điểm cực
 
 <img width="685" alt="Ảnh màn hình 2024-08-02 lúc 19 10 58" src="https://github.com/user-attachments/assets/5ceaa152-dc4c-41cf-9dbc-c6253e0f984b">
 
-<img width="877" alt="Ảnh màn hình 2024-08-02 lúc 19 13 08" src="https://github.com/user-attachments/assets/b0f204c7-4a86-4da4-b5ba-53b685ee143d">
+<img width="777" alt="Ảnh màn hình 2024-08-02 lúc 19 13 08" src="https://github.com/user-attachments/assets/b0f204c7-4a86-4da4-b5ba-53b685ee143d">
 
 ## 3. Linear regression
 
@@ -475,7 +475,7 @@ phuong pháp này có thể dùng close form (công thức có sẵn) hoặc gra
 
 - khác liner ở chỗ poly có bậc. có thể mô hình được môi quan hệ phi tuyến tính, ví dụ như:
 
-<img width="332" alt="Ảnh màn hình 2024-08-06 lúc 23 50 04" src="https://github.com/user-attachments/assets/c722789f-ff74-43f8-9889-ab945c400384">
+<img width="432" alt="Ảnh màn hình 2024-08-06 lúc 23 50 04" src="https://github.com/user-attachments/assets/c722789f-ff74-43f8-9889-ab945c400384">
 
 <img width="693" alt="Ảnh màn hình 2024-08-02 lúc 19 22 44" src="https://github.com/user-attachments/assets/5d21c9b9-c29e-445e-80e9-ea78f628d5bf">
 
@@ -483,7 +483,7 @@ phuong pháp này có thể dùng close form (công thức có sẵn) hoặc gra
 
 ## 5. Multicol linearity
 
-<img width="424" alt="Ảnh màn hình 2024-08-02 lúc 19 31 48" src="https://github.com/user-attachments/assets/391fcbfe-12f1-43b4-a6d4-ce883b8b0add">  <img width="421" alt="Ảnh màn hình 2024-08-02 lúc 19 32 00" src="https://github.com/user-attachments/assets/a5861aff-ba2f-4a72-a6e9-41efa8c1b78e">
+<img width="524" alt="Ảnh màn hình 2024-08-02 lúc 19 31 48" src="https://github.com/user-attachments/assets/391fcbfe-12f1-43b4-a6d4-ce883b8b0add">  <img width="421" alt="Ảnh màn hình 2024-08-02 lúc 19 32 00" src="https://github.com/user-attachments/assets/a5861aff-ba2f-4a72-a6e9-41efa8c1b78e">
 
 ## DEMO
 
