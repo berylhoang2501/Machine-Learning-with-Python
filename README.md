@@ -489,9 +489,17 @@ phuong pháp này có thể dùng close form (công thức có sẵn) hoặc gra
 
 https://www.kaggle.com/code/deanmendes/linear-regression-usa-housing?authuser=0
 
+- xong bài toán regression thì phaải xem được ảnh hưởng của từng feature đối với biến output
+
 - nên áp dụng normalize với linear regression -> cơ sở công bằng để đánh giá ảnh hưởng của từng biến lên mô hình
 
-- residual plot là kĩ thuật để nhận ra giũa các biến này với biến target có mỗi quan hệ tuyến tính hay không \
+- phải có hint hoặc assumption trc khi áp dụng liner. trong trường hợp này thường dùng residual plot (residual plot là kĩ thuật để nhận ra giũa các biến này với biến target có mỗi quan hệ tuyến tính hay không)
+
+- khi gặp hiện tượng các điểm data points randomly spread xung quanh trục x thì chứng tỏ có một liner relation tồn tại giữa 2 biến này
+
+<img width="521" alt="Ảnh màn hình 2024-08-07 lúc 07 21 58" src="https://github.com/user-attachments/assets/a2c86e0d-a845-4fb4-9f51-4dac9501dc21">
+
+- giả sử có mỗi qhe tuyến tính giữa biến price và biến area population thì nó sẽ tìm 1 ptrinh liner regreesion đơn giản để giải thích mói quan hệ tuyến tính này. sau đó so sánh kết quả y' với biến y thực tế. giả sử data set có 1000 mẫu sẽ tính ra đc 1000 điểm chệnh lệch. từ 1000 điểm chênh lệch đó sẽ dùng để vẽ nên đồ thị residal plot này. khi đồ thị này có dạng random thì những điểm trong đồ thị này đến từ các điểm không mô hình hoá đc 
 
 ## techtalks
 
