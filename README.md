@@ -501,6 +501,17 @@ https://www.kaggle.com/code/deanmendes/linear-regression-usa-housing?authuser=0
 
 - giả sử có mỗi qhe tuyến tính giữa biến price và biến area population thì nó sẽ tìm 1 ptrinh liner regreesion đơn giản để giải thích mói quan hệ tuyến tính này. sau đó so sánh kết quả y' với biến y thực tế. giả sử data set có 1000 mẫu sẽ tính ra đc 1000 điểm chệnh lệch. từ 1000 điểm chênh lệch đó sẽ dùng để vẽ nên đồ thị residal plot này. khi đồ thị này có dạng random thì những điểm trong đồ thị này đến từ các điểm không mô hình hoá đc 
 
+- train_test_split trong thư viện scikit-learn
+
+test_size: Tỷ lệ hoặc số lượng mẫu sẽ được tách ra để làm tập kiểm tra. Ví dụ, nếu test_size=0.2, 20% dữ liệu sẽ được dùng làm tập kiểm tra, và 80% còn lại sẽ dùng để huấn luyện.
+
+train_size: Tỷ lệ hoặc số lượng mẫu sẽ được tách ra để làm tập huấn luyện. Nếu không được chỉ định, phần còn lại sau khi tách test_size sẽ được dùng làm tập huấn luyện.
+
+random_state: Số nguyên ngẫu nhiên được sử dụng để đảm bảo tính tái lập. Khi bạn chạy lại mã với cùng một 
+random_state, bạn sẽ nhận được cùng một sự phân chia dữ liệu.
+
+shuffle: Mặc định là True, dữ liệu sẽ được xáo trộn trước khi phân chia để đảm bảo tính ngẫu nhiên.
+
 ## techtalks
 
 - Personality Indentification using Deep Learning
