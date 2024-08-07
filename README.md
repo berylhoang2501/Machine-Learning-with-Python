@@ -611,6 +611,14 @@ ghép những step trong preprocessing, step trong mô hình vào chung 1 chỗ 
 
 <img width="489" alt="Ảnh màn hình 2024-08-04 lúc 10 05 58" src="https://github.com/user-attachments/assets/11db227c-4567-4bee-91e1-a39398dc13f9">
 
-
 <img width="493" alt="Ảnh màn hình 2024-08-04 lúc 10 04 37" src="https://github.com/user-attachments/assets/982ade70-2a5f-4fa0-9b18-4b6dea8ad267">
 
+# Buổi học 6: Decision Tree & Random Forest (7/08/2024)
+
+https://www.datascienceprophet.com/understanding-the-mathematics-behind-the-decision-tree-algorithm-part-i/?authuser=1
+
+https://www.kaggle.com/code/sravan1701/churn-prediction-using-random-forest-and-smote?authuser=1
+
+https://www.kaggle.com/code/hongngcthuthng/decision-tree-random-forest-with-classweight#3.-Test-the-3-models
+
+https://varshasaini.in/glossary/smote/?authuser=1
