@@ -622,3 +622,7 @@ https://www.kaggle.com/code/sravan1701/churn-prediction-using-random-forest-and-
 https://www.kaggle.com/code/hongngcthuthng/decision-tree-random-forest-with-classweight#3.-Test-the-3-models
 
 https://varshasaini.in/glossary/smote/?authuser=1
+
+<img width="455" alt="Ảnh màn hình 2024-08-08 lúc 10 34 00" src="https://github.com/user-attachments/assets/b5a3fbec-37aa-4878-814a-39b1dfbee864">
+
+<img width="452" alt="Ảnh màn hình 2024-08-08 lúc 10 34 10" src="https://github.com/user-attachments/assets/ce13f325-64e3-4f80-9176-6b23410e72e8">
