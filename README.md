@@ -625,6 +625,8 @@ https://varshasaini.in/glossary/smote/?authuser=1
 
 # Decision Tree
 
+## 1.Giới thiệu
+
 - vẽ ra 1 sơ đồ đi từ thời điểm ban đầu đến đích dựa vào việc trả lời các câu hỏi đưa ra
 
 - được sử dụng khá nhiều trong lĩnh vực finance
@@ -633,13 +635,35 @@ https://varshasaini.in/glossary/smote/?authuser=1
 
 - decision tree là base model (thuật toán nền) để build mô hình random forest 
 
-<img width="430" alt="Ảnh màn hình 2024-08-09 lúc 07 25 54" src="https://github.com/user-attachments/assets/03714ac8-1d0a-4914-8787-72fcf973c4b3">
+<img width="430" alt="Ảnh màn hình 2024-08-09 lúc 07 25 54" src="https://github.com/user-attachments/assets/03714ac8-1d0a-4914-8787-72fcf973c4b3">
 
 - đặc biệt đc dùng nhiều trong phân tích quyết định
 
-## 1.Giới thiệu
+- <img width="581" alt="Ảnh màn hình 2024-08-09 lúc 08 09 18" src="https://github.com/user-attachments/assets/77888e1e-c744-4afe-b89b-fb14efd186c0">
+
+- ở trong noole sẽ khảo sát các giả trị có thể có của 1 biến, decison tree sẽ tìm cách chọn ra biến nào đặt vô node noà cho phù hợp
+
+noole trên cùng đầu tiên gọi là root noole
+
+tiêu chí lựa chọn biến để đưa vào noole của decison tree dựa trên "thuần khiết"
+
+**Làm thế nào để xác định được phân chia tốt nhất?
+
+<img width="423" alt="Ảnh màn hình 2024-08-09 lúc 08 18 09" src="https://github.com/user-attachments/assets/29aa7e59-6f0f-400b-98c2-b58b627fa19b">
+
+- sự thuần khiết của 1 biến đc định nghĩa bằng cách chia sau khi chia data set theo biến đó.
 
 ## 2. Thuật toán
+
+**Đo mức độ không thuần khiết**
+
+- để máy tính hiểu biến nào "thuần khiết" hơn thì cần sự dụng 1 phép đo để đo mức độ không đồng nhất khi cắt dữ liệu trong 1 node và thuật toán đó được gọi là gini index
+
+<img width="469" alt="Ảnh màn hình 2024-08-09 lúc 08 21 34" src="https://github.com/user-attachments/assets/e200c679-1dd5-4814-81ca-90362cfd59dd">\
+
+<img width="270" alt="Ảnh màn hình 2024-08-09 lúc 08 22 51" src="https://github.com/user-attachments/assets/2c6c8a5e-382f-413d-8f35-a3bb507a12fa">
+
+- gini thuộc R, gini thấp -> tính đồng nhất cao và ngược lại
 
 ## 3 Ưu/khuyếtđiểm
 
