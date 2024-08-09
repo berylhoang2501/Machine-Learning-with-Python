@@ -720,3 +720,19 @@ ngoài ra chúng ta còn có thể tránh nhiều bằng cách remove bớt nh�
 ## 4. Xây dựng Random Forests sử dụng sklearn
 
 <img width="455" alt="Ảnh màn hình 2024-08-08 lúc 10 34 00" src="https://github.com/user-attachments/assets/b5a3fbec-37aa-4878-814a-39b1dfbee864"> <img width="452" alt="Ảnh màn hình 2024-08-08 lúc 10 34 10" src="https://github.com/user-attachments/assets/ce13f325-64e3-4f80-9176-6b23410e72e8">
+
+### DEMO 1: Decision Tree & Random Forest with ClassWeight
+
+- ClassWeight là một kỹ thuật dùng để chống data imbalance
+
+- nếu kaggle không cho chạy pandas profiling thì có thể dùng ydata-profiling cũng tương tự
+
+- ngoài mất cân bằng giữa các lable còn có trường hợp mất cân bằng nặng hơn là mất cân bằng cả trong pattern của lable đó. Các cách xử lý: xử lý outliers, over sampling,... -> thầy khuyên dùng cách over sampling = phương pháp SMOTE để an toàn hơn cho mô hình
+
+btvn: edit notebook này dựa trên gợi ý feature importance và oversampling (có thể sử dụng pp SMOTE) để cải thiện model này
+
+- SMOTE stands for Synthetic Minority Oversampling Technique. kỹ thuật over sampling dựa trên KNN, tập trung vào nhãn minority.
+
+### DEMO 2: Churn prediction using Random Forest and SMOTE
+
+- nói về cách sử dụng pp SMOTE trên mô 
