@@ -719,8 +719,6 @@ ngoài ra chúng ta còn có thể tránh nhiều bằng cách remove bớt nh�
 
 ## 4. Xây dựng Random Forests sử dụng sklearn
 
-<img width="455" alt="Ảnh màn hình 2024-08-08 lúc 10 34 00" src="https://github.com/user-attachments/assets/b5a3fbec-37aa-4878-814a-39b1dfbee864"> <img width="452" alt="Ảnh màn hình 2024-08-08 lúc 10 34 10" src="https://github.com/user-attachments/assets/ce13f325-64e3-4f80-9176-6b23410e72e8">
-
 ### DEMO 1: Decision Tree & Random Forest with ClassWeight
 
 - ClassWeight là một kỹ thuật dùng để chống data imbalance
@@ -735,4 +733,8 @@ btvn: edit notebook này dựa trên gợi ý feature importance và oversamplin
 
 ### DEMO 2: Churn prediction using Random Forest and SMOTE
 
-- nói về cách sử dụng pp SMOTE trên mô 
+- nói về cách sử dụng pp SMOTE trên mô hình
+
+<img width="455" alt="Ảnh màn hình 2024-08-08 lúc 10 34 00" src="https://github.com/user-attachments/assets/b5a3fbec-37aa-4878-814a-39b1dfbee864"> <img width="452" alt="Ảnh màn hình 2024-08-08 lúc 10 34 10" src="https://github.com/user-attachments/assets/ce13f325-64e3-4f80-9176-6b23410e72e8">
+
+
