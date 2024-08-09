@@ -665,7 +665,23 @@ tiêu chí lựa chọn biến để đưa vào noole của decison tree dựa t
 
 - gini thuộc R, gini thấp -> tính đồng nhất cao và ngược lại
 
-## 3 Ưu/khuyếtđiểm
+- một số người không thích dùng gini thì có thể dùng Information Gain. khác nhau ở chỗ sẽ lựa chọn biến có information gain cao nhất. 
+
+## 3 Ưu/khuyết điểm
+
+**Ưu điểm**
+
+<img width="421" alt="Ảnh màn hình 2024-08-09 lúc 09 34 50" src="https://github.com/user-attachments/assets/86d7ea51-49eb-4122-a82a-35c9bd3c5576">
+
+- Khi áp dụng trong regression (kết quả ra là một con số chứ không phải là phân loại) trong decision tree thì cả gini và information gain đều k dùng đc. Vì vậy cần áp dụng mô hình có cách hdong tương tự có tên là 'decision tree regression', mô hình này sử dụng các metrics như absolute_error, MSE,.. để đo sự giống nhau giữa những con số thực 
+
+<img width="649" alt="Ảnh màn hình 2024-08-09 lúc 09 40 33" src="https://github.com/user-attachments/assets/61f30ce6-6083-42f8-bce0-c249b0265c39">
+
+**Khuyết điểm**
+
+<img width="420" alt="Ảnh màn hình 2024-08-09 lúc 09 48 44" src="https://github.com/user-attachments/assets/e4dd9944-f77c-4591-ba28-0791333afce4">
+
+- nếu có biến continous thì không nên dùng decision tree, hoặc drop thử biến rồi xem decision tree còn hiệu quả k r mới dùng
 
 ## 4. Xây dựng Decision Trees sử dụng sklearn
 
