@@ -311,9 +311,9 @@ Giả sử trong các review tích cực, từ "good" và "excellent" xuất hi�
 TF-IDF sẽ giúp mô hình Naive Bayes nhận ra rằng "good" và "excellent" quan trọng hơn "the" hoặc "is" trong việc phân loại review thành tích cực, và tương tự với "bad" và "terrible" trong review tiêu cực.
 
 
-<img width="336" alt="Ảnh màn hình 2024-07-28 lúc 02 14 41" src="https://github.com/user-attachments/assets/912698f8-692f-495f-8eb1-358518cc86f4">
+<img width="436" alt="Ảnh màn hình 2024-07-28 lúc 02 14 41" src="https://github.com/user-attachments/assets/912698f8-692f-495f-8eb1-358518cc86f4">
 
-<img width="341" alt="Ảnh màn hình 2024-07-28 lúc 02 14 47" src="https://github.com/user-attachments/assets/2a94d71f-ef47-4194-91d9-f5c5b425a17b">
+<img width="441" alt="Ảnh màn hình 2024-07-28 lúc 02 14 47" src="https://github.com/user-attachments/assets/2a94d71f-ef47-4194-91d9-f5c5b425a17b">
 
 # Buổi học 3: Supervised Learning - K-Nearest Neighbors (28/07/2024)
 
