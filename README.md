@@ -798,5 +798,23 @@ https://www.youtube.com/watch?v=PxgVFp5a0E4&t=14s
 
 ## 6. LightGBM
 
+- dùng leaf-wise nên sẽ nhanh hơn XGBoost khoảng chừng 10 lần
+
+- dễ bị overfitting hơn XGBoost 
+
 ## 7. CatBoost 
+
+https://www.youtube.com/watch?v=KXOTSkPL2X4
+
+- cơ chế xử lý biến categorical
+
+### DEMO 1: SVM vs XGBoost vs Random Forest
+
+### DEMO 2: Comparison of catboost and one-hot encoding
+
+https://www.geeksforgeeks.org/categorical-encoding-with-catboost-encoder/
+
+<img width="397" alt="Ảnh màn hình 2024-08-09 lúc 20 50 04" src="https://github.com/user-attachments/assets/10911f8b-acf0-4655-af68-d2067985fcd8">
+
+<img width="391" alt="Ảnh màn hình 2024-08-09 lúc 20 50 12" src="https://github.com/user-attachments/assets/8974568f-2700-4fd2-b1b6-63771381991c">
 
