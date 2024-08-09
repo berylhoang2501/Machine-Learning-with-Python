@@ -623,6 +623,38 @@ https://www.kaggle.com/code/hongngcthuthng/decision-tree-random-forest-with-clas
 
 https://varshasaini.in/glossary/smote/?authuser=1
 
+# Decision Tree
+
+- vẽ ra 1 sơ đồ đi từ thời điểm ban đầu đến đích dựa vào việc trả lời các câu hỏi đưa ra
+
+- được sử dụng khá nhiều trong lĩnh vực finance
+
+- có tính giải thích cao (interpretibility)
+
+- decision tree là base model (thuật toán nền) để build mô hình random forest 
+
+<img width="430" alt="Ảnh màn hình 2024-08-09 lúc 07 25 54" src="https://github.com/user-attachments/assets/03714ac8-1d0a-4914-8787-72fcf973c4b3">
+
+- đặc biệt đc dùng nhiều trong phân tích quyết định
+
+## 1.Giới thiệu
+
+## 2. Thuật toán
+
+## 3 Ưu/khuyếtđiểm
+
+## 4. Xây dựng Decision Trees sử dụng sklearn
+
+#  Ranđom Forest
+
+## 1.Giới thiệu
+
+## 2. Thuật toán
+
+## 3 Ưu/khuyếtđiểm
+
+## 4. Xây dựng Random Forests sử dụng sklearn
+
 <img width="455" alt="Ảnh màn hình 2024-08-08 lúc 10 34 00" src="https://github.com/user-attachments/assets/b5a3fbec-37aa-4878-814a-39b1dfbee864">
 
 <img width="452" alt="Ảnh màn hình 2024-08-08 lúc 10 34 10" src="https://github.com/user-attachments/assets/ce13f325-64e3-4f80-9176-6b23410e72e8">
