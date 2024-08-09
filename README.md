@@ -814,7 +814,7 @@ https://www.youtube.com/watch?v=KXOTSkPL2X4
 
 https://www.geeksforgeeks.org/categorical-encoding-with-catboost-encoder/
 
-<img width="397" alt="Ảnh màn hình 2024-08-09 lúc 20 50 04" src="https://github.com/user-attachments/assets/10911f8b-acf0-4655-af68-d2067985fcd8">
+<img width="497" alt="Ảnh màn hình 2024-08-09 lúc 20 50 04" src="https://github.com/user-attachments/assets/10911f8b-acf0-4655-af68-d2067985fcd8">
 
-<img width="391" alt="Ảnh màn hình 2024-08-09 lúc 20 50 12" src="https://github.com/user-attachments/assets/8974568f-2700-4fd2-b1b6-63771381991c">
+<img width="491" alt="Ảnh màn hình 2024-08-09 lúc 20 50 12" src="https://github.com/user-attachments/assets/8974568f-2700-4fd2-b1b6-63771381991c">
 
