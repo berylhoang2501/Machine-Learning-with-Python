@@ -737,4 +737,66 @@ btvn: edit notebook này dựa trên gợi ý feature importance và oversamplin
 
 <img width="455" alt="Ảnh màn hình 2024-08-08 lúc 10 34 00" src="https://github.com/user-attachments/assets/b5a3fbec-37aa-4878-814a-39b1dfbee864"> <img width="452" alt="Ảnh màn hình 2024-08-08 lúc 10 34 10" src="https://github.com/user-attachments/assets/ce13f325-64e3-4f80-9176-6b23410e72e8">
 
+# Buổi học 7: Boosting Techniques + SVM (9/08/2024)
+
+https://www.kaggle.com/code/hongngcthuthng/comparison-of-catboost-and-one-hot-encoding
+
+https://www.kaggle.com/code/hongngcthuthng/svm-vs-xgboost-vs-random-forest
+
+- SVM (Support Vector Machine) là một mô hình Machine Learning rất mạnh mẽ và linh hoạt, có khả năng thực hiện phân loại tuyến tính hoặc phi
+tuyển, hồi quy và thậm chí phát hiện ngoại lệ.
+
+- SVM là một trong những mô hình phổ biến nhất trong Machine Learning, và bất cứ ai quan tâm đến Machine Learning nên biết.
+
+- SVM đặc biệt thích hợp để phân loại các bộ dữ liệu phức tạp nhưng nhỏ hoặc vừa. (vì SVM chạy khá lâu)
+
+- Ngoài việc thực hiện phân loại tuyển tính, SVM có thể thực hiện hiệu quả phân loại phi tuyến tính bằng cách sử dụng "Kernel trick", ngầm ánh xạ các input vào không gian high-dimensional feature. (tránh được cruise of high dimensionality)
+
+## 1. Giới thiệu
+
+## 2. Thuật toán
+
+**Linear SVM**
+
+**Soft margin SVM**
+
+**The “Kernel Trick”**
+
+## 3. Ưu/khuyết điểm
+
+- thường là mô hình đầu tay để dùng khảo sát trên tập dữ liệu
+
+**Ưu điểm**
+
+<img width="843" alt="Ảnh màn hình 2024-08-09 lúc 19 00 42" src="https://github.com/user-attachments/assets/22acbb49-c53b-4f43-94f8-6371d344fbf0">
+
+## 4. Xây dựng SVMs sử dụng sklearn
+
+# Boosting
+
+## 1. Giới thiệu Boosting
+
+- Đây là một thuật toán học quần thể bằng cách xây dựng nhiều thuật toán cùng lúc (ví dụ như Decision Tree) và kết hợp chúng lại. Mục đích là để có một cụm hoặc một nhóm các 'weak learner' rồi kết hợp chúng lại để tạo ra một 'strong learner' duy nhất.
+
+## 2. AdaBoost
+
+- AdaBoost (Adaptive Boosting) là một kỹ thuật boosting phổ biến giúp ta kết hợp nhiều 'weak classifier' (trình phân loại yếu) thành một 'strong classifier' (trình phân loại mạnh) duy nhất.
+
+- hoạt động trên tư duy sửa lỗi: model sau sẽ học tập dựa trên sai lầm của model trước 
+
+## 3. Thuật toán AdaBoost
+
+## 4. Xây dựng AdaBoost
+
+## 5. XGBoost
+
+https://www.youtube.com/watch?v=PxgVFp5a0E4&t=14s
+
+- base model của XGBoost là decision tree
+
+- hoạt động trên tư duy sửa lỗi: model sau sẽ dự đoán sai lầm của model trước 
+
+## 6. LightGBM
+
+## 7. CatBoost 
 
