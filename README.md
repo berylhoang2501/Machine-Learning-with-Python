@@ -1,4 +1,4 @@
-# Course structure
+<img width="1038" alt="Ảnh màn hình 2024-08-09 lúc 15 58 20" src="https://github.com/user-attachments/assets/abf0fb6a-1dcb-4f20-b268-2de93a7af4c5"># Course structure
 
 - supervised learning
 
@@ -689,10 +689,33 @@ tiêu chí lựa chọn biến để đưa vào noole của decison tree dựa t
 
 - random forest là một trong những mô hình manh nhất của machine learning
 
+- Nhược điểm chính của cây quyết định (Decision Tree) là chúng có khuynh hướng overfit dữ liệu huấn luyện.
+
+- Random Forest là một cách để giải quyết vấn đề này. Một Random Forest về bản chất là một tập hợp các cây quyết định, trong đó mỗi cây hơi khác so với các cây khác.
+
+**Ứng dụng**
+
+<img width="1040" alt="Ảnh màn hình 2024-08-09 lúc 15 58 39" src="https://github.com/user-attachments/assets/64e22cc4-e063-4ae2-96d5-0586e6530193">
 
 ## 2. Thuật toán
 
+- Khi dự đoán, Random Forest sẽ kết hợp các dự đoán từ từng cây bằng cách sử dụng phương pháp bình chọn (major voting) cho bài toán classification hoặc trung bình (averaging) cho bài toán regression.
+
 ## 3 Ưu/khuyếtđiểm
+
+**Ưu điểm**
+
+- ta có thể Nhận thấy tầm quan trọng của tính năng tương đối, giúp chọn các tính năng đóng góp nhiều nhất cho quá trình phân loại.
+
+search "random forest feature importance."
+
+ngoài ra chúng ta còn có thể tránh nhiều bằng cách remove bớt những thuộc tính có % đóng góp vào mô hình quá thấp. điều này cũng sẽ góp phần làm mô hình không bị nhiễu
+
+![Ảnh màn hình 2024-08-09 lúc 16 13 50](https://github.com/user-attachments/assets/d984f6dd-e46e-4c85-bd76-f934103f4d87)
+
+**Khuyết điểm**
+
+- chậm, tính giải thích thấp
 
 ## 4. Xây dựng Random Forests sử dụng sklearn
 
