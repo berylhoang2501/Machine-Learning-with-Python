@@ -850,4 +850,54 @@ https://pytorch.org
 
 - tìm bộ trọng số thích hợp sao cho giá trị "Loss Value" (hay còn gọi là hàm lỗi) càng nhỏ càng tốt trong thuật toán Backpropagation
 
+**Stochastic Gradient Descent**
+
+<img width="1216" alt="Ảnh màn hình 2024-08-10 lúc 10 07 57" src="https://github.com/user-attachments/assets/3b04384d-4dd0-44fa-9a5e-81c71b86587b">
+
+**Batch Gradient Descent**
+
+**Mini-batch Gradient Descent**
+
+- sự kết hợp giữa 2 pp trên.
+
+sử dụng mini batch gradient decent. batchsize = 32 mẫu, N = 320 mẫu. cứ 1 lầm mô hình đc update gọi là 1 interation . vậy 1 epoch = ? iteration? 5 epoch = ? iteration 
+
+1 epoch = 320/32 = 10  iteration -> 5 epoch = 50 iteration
+
 ## 4. Các thành phần của Neural Network
+
+- Công dụng của hàm kích hoạt:
+
+Đưa sự phi tuyến tính vào mô hình
+
+Giúp giới hạn output của neural
+
+Góp phần hạn chế gradient vanishing (trái ngược với gradient vanishing là exploding gradient)
+
+**Hiện tượng Gradient Vanishing là gì?**
+
+Gradient vanishing xảy ra khi các gradient (đạo hàm của hàm mất mát theo các trọng số) trở nên rất nhỏ trong quá trình truyền ngược (backpropagation), đặc biệt là ở các lớp gần đầu vào của mạng. Khi gradient trở nên quá nhỏ, các trọng số của các lớp này không được cập nhật một cách đáng kể trong quá trình huấn luyện, dẫn đến mạng không học được hoặc học rất chậm.
+
+**Các hàm kích hoạt thông dụng:**
+
+<img width="947" alt="Ảnh màn hình 2024-08-10 lúc 10 22 21" src="https://github.com/user-attachments/assets/4dbc70b7-1eae-481f-a15c-35621a3ba276">
+
+<img width="855" alt="Ảnh màn hình 2024-08-10 lúc 10 33 37" src="https://github.com/user-attachments/assets/b3859b7d-f256-46a1-9a89-f5e9221ed81e">
+
+- có cách nào làm nhanh để tính đc mẫu này thuộc nhãn nào không -> Bạn không cần tính toàn bộ xác suất thông qua hàm Softmax, chỉ cần tìm giá trị lớn nhất trong vector đầu ra của lớp logits và xác định vị trí của nó. Nhãn tương ứng với vị trí này chính là nhãn của mẫu.
+
+**Hàm lỗi (Loss function)**
+
+- Một số hàm lỗi thông dụng cho bài toán classification: binary cross entropy và categorical cross entropy.
+
+**Optimizer**
+
+- Optimizer (hàm tối ưu) là các hàm được dùng để tỉnh chỉnh trọng số của mô hình.
+
+- khuyên dùng  thuật toán tối ưu Adam
+
+**Hyperparameters vs Parameters**
+
+![Ảnh màn hình 2024-08-10 lúc 10 40 27](https://github.com/user-attachments/assets/3d3d70b0-45a7-460f-8e1b-d0118a24bf2f)
+
+- Hyperparameters không update đc mà phải dùng pp tunning
