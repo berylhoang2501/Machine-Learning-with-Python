@@ -818,3 +818,36 @@ https://www.geeksforgeeks.org/categorical-encoding-with-catboost-encoder/
 
 <img width="491" alt="Ảnh màn hình 2024-08-09 lúc 20 50 12" src="https://github.com/user-attachments/assets/8974568f-2700-4fd2-b1b6-63771381991c">
 
+# Buổi học 8: Neural Network (10/08/2024)
+
+https://paperswithcode.com
+
+https://pytorch.org
+
+- những nghiên cứ mới nhất về AI & ML
+
+## 1. Giới thiệu về Pytorch
+
+**Tensor**
+
+- Thành phần cơ bản nhất của Pytorch là Tensor.
+
+**Thử tính đạo hàm với Pytorch**
+
+<img width="1267" alt="Ảnh màn hình 2024-08-10 lúc 09 03 15" src="https://github.com/user-attachments/assets/f325b4db-2853-43da-aa74-f2ad2d4b84ba">
+
+## 2. Giới thiệu về Neural Network
+
+<img width="897" alt="Ảnh màn hình 2024-08-10 lúc 09 07 41" src="https://github.com/user-attachments/assets/6c89d548-7c65-4555-bd9a-0c83eb97a7c4">
+
+<img width="1245" alt="Ảnh màn hình 2024-08-10 lúc 09 20 53" src="https://github.com/user-attachments/assets/1e7c9a8c-8b13-472f-b9bc-141d23e76b3a">
+
+- Vai trò của Activation Function: đưa sự phi tuyến vào mô hình, chuẩn hoá giá trị đầu ra, tăng tốc độ học,..
+
+## 3. Thuật toán Back Propagation
+
+<img width="685" alt="Ảnh màn hình 2024-08-10 lúc 09 24 31" src="https://github.com/user-attachments/assets/01e649fb-f862-46e4-8574-1ac91c7f0464">
+
+- tìm bộ trọng số thích hợp sao cho giá trị "Loss Value" (hay còn gọi là hàm lỗi) càng nhỏ càng tốt trong thuật toán Backpropagation
+
+## 4. Các thành phần của Neural Network
