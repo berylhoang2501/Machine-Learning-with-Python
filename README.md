@@ -826,6 +826,8 @@ https://pytorch.org
 
 - những nghiên cứ mới nhất về AI & ML
 
+https://www.deeplearningbook.org/contents/numerical.html
+
 ## 1. Giới thiệu về Pytorch
 
 **Tensor**
