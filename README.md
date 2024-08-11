@@ -903,3 +903,36 @@ Gradient vanishing xảy ra khi các gradient (đạo hàm của hàm mất mát
 ![Ảnh màn hình 2024-08-10 lúc 10 40 27](https://github.com/user-attachments/assets/3d3d70b0-45a7-460f-8e1b-d0118a24bf2f)
 
 - Hyperparameters không update đc mà phải dùng pp tunning
+
+# Buổi học 9: Neural Network (tt) (11/08/2024)
+
+## DEMO: Pytorch MLP MNIST
+
+https://www.kaggle.com/code/hongngcthuthng/pytorch-mlp-mnist?scriptVersionId=192013873
+
+CHUẨN BỊ DATA
+
+
+- Bước 1: tạo data set class để đọc data
+
+Tạo data loader để tìm cách đưa data đi vào model 
+
+- Bước 2: tạo ra class để đọc tập train
+
+self.transform là biến lưu giữ các 1 pp augmentation mà chúng ta chọn (over sampling cho hình ảnh trong deeo learning)
+
+- Bước 3: tạo ra class để đọc tập test
+
+- Bước 4: Truyền đường dẫn
+
+chuyển array thành dạng để cho pytorch đọc đc bằng câu lệnh: transform=transforms.ToTensor())
+
+- Buơc 5: Chuẩn bị cách đọc data cho model
+
+____
+
+CẤU TRÚC MẠNG NEURAL NETWORK
+
+
+
+
