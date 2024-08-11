@@ -933,6 +933,14 @@ ____
 
 CẤU TRÚC MẠNG NEURAL NETWORK
 
+<img width="491" alt="Ảnh màn hình 2024-08-11 lúc 09 38 30" src="https://github.com/user-attachments/assets/97a1ced9-73d6-469f-aeee-f82b0e2fc981">
+
+<img width="493" alt="Ảnh màn hình 2024-08-11 lúc 09 38 38" src="https://github.com/user-attachments/assets/50c08390-301f-465a-a994-ab9fcdd863e4">
+
+<img width="493" alt="Ảnh màn hình 2024-08-11 lúc 09 38 47" src="https://github.com/user-attachments/assets/c2e5f8bc-da45-43bf-b65b-83acfe7a3cf7">
+
+
+
 
 
 
