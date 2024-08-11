@@ -319,6 +319,8 @@ TF-IDF sẽ giúp mô hình Naive Bayes nhận ra rằng "good" và "excellent" 
 
 https://www.gradio.app/guides/quickstart?authuser=1
 
+https://www.mdpi.com/2227-7080/9/3/52?authuser=1
+
 K-Nearest Neighbors (KNN) là một thuật toán thuộc nhóm Supervised Learning được sử dụng cho classification và regression.
 
 Với classification, ouput là class dựa trên KNN trong training data. Với regression, output là trung bình các giá trị của target variable dựa trên KNN trong training data
@@ -939,8 +941,18 @@ CẤU TRÚC MẠNG NEURAL NETWORK
 
 <img width="493" alt="Ảnh màn hình 2024-08-11 lúc 09 38 47" src="https://github.com/user-attachments/assets/c2e5f8bc-da45-43bf-b65b-83acfe7a3cf7">
 
+# Buổi học 9: Một số Kĩ Thuật bổ sung (11/08/2024)
 
+- Cross-validation là 1 pp đánh giá performance của mô hình
 
+**Ưu điểm**
 
+- có thể đánh giá trên toàn bộ dataset -> ưu việt hơn pp thông thường. 
 
+- tránh được sampling bias
 
+**Cách search ra bộ siêu tham số tốt nhất**
+
+- Hyperclassifiers search
+
+- pycaret -> kỹ thuật dành cho những ngừoi muốn lowcode khi làm machine learning
