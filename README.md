@@ -731,6 +731,8 @@ ngoài ra chúng ta còn có thể tránh nhiều bằng cách remove bớt nh�
 
 btvn: edit notebook này dựa trên gợi ý feature importance và oversampling (có thể sử dụng pp SMOTE) để cải thiện model này
 
+- biểu đồ đánh giá mức độ đóng góp cuả từng feature đối với hô hình -> hỗ trợ chúng ta lựa chọn feature selection dựa trên feature importantce. randome forest làm cách này bằng cách bỏ các feature ra khỏi mô hình. nếu feature đó làm mô hình sụt gỉam điểm số nhiều thì đó là feature quan trọng
+
 - SMOTE stands for Synthetic Minority Oversampling Technique. kỹ thuật over sampling dựa trên KNN, tập trung vào nhãn minority.
 
 ### DEMO 2: Churn prediction using Random Forest and SMOTE
