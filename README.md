@@ -711,7 +711,9 @@ tiêu chí lựa chọn biến để đưa vào noole của decison tree dựa t
 
 search "random forest feature importance."
 
-ngoài ra chúng ta còn có thể tránh nhiều bằng cách remove bớt những thuộc tính có % đóng góp vào mô hình quá thấp. điều này cũng sẽ góp phần làm mô hình không bị nhiễu
+- ngoài ra chúng ta còn có thể tránh nhiều bằng cách remove bớt những thuộc tính có % đóng góp vào mô hình quá thấp. điều này cũng sẽ góp phần làm mô hình không bị nhiễu
+
+- biểu đồ đánh giá mức độ đóng góp cuả từng feature đối với hô hình -> hỗ trợ chúng ta lựa chọn feature selection dựa trên feature importantce. randome forest làm cách này bằng cách bỏ các feature ra khỏi mô hình. nếu feature đó làm mô hình sụt gỉam điểm số nhiều thì đó là feature quan trọng
 
 ![Ảnh màn hình 2024-08-09 lúc 16 13 50](https://github.com/user-attachments/assets/d984f6dd-e46e-4c85-bd76-f934103f4d87)
 
@@ -723,15 +725,13 @@ ngoài ra chúng ta còn có thể tránh nhiều bằng cách remove bớt nh�
 
 ### DEMO 1: Decision Tree & Random Forest with ClassWeight
 
-- ClassWeight là một kỹ thuật dùng để chống data imbalance
+- ClassWeight là một kỹ thuật dùng để chống data imbalance bằng cách gán cho nhãn minority số điểm cao hơn. điều này giúp mô hình quan tâm nhiều hơn và học nhiều hơn đối với nhãn ít mẫu (ví dụ 90% nhãn survive 10% nhãn die)
 
 - nếu kaggle không cho chạy pandas profiling thì có thể dùng ydata-profiling cũng tương tự
 
 - ngoài mất cân bằng giữa các lable còn có trường hợp mất cân bằng nặng hơn là mất cân bằng cả trong pattern của lable đó. Các cách xử lý: xử lý outliers, over sampling,... -> thầy khuyên dùng cách over sampling = phương pháp SMOTE để an toàn hơn cho mô hình
 
 btvn: edit notebook này dựa trên gợi ý feature importance và oversampling (có thể sử dụng pp SMOTE) để cải thiện model này
-
-- biểu đồ đánh giá mức độ đóng góp cuả từng feature đối với hô hình -> hỗ trợ chúng ta lựa chọn feature selection dựa trên feature importantce. randome forest làm cách này bằng cách bỏ các feature ra khỏi mô hình. nếu feature đó làm mô hình sụt gỉam điểm số nhiều thì đó là feature quan trọng
 
 - SMOTE stands for Synthetic Minority Oversampling Technique. kỹ thuật over sampling dựa trên KNN, tập trung vào nhãn minority.
 
