@@ -958,3 +958,47 @@ CẤU TRÚC MẠNG NEURAL NETWORK
 - Hyperclassifiers search
 
 - pycaret -> kỹ thuật dành cho những ngừoi muốn lowcode khi làm machine learning
+
+**Hyperclassifiers search**
+
+- Cho phép thực hiện grid search CV hoặc random search CV trên nhiều câu lệnh cùng 1 lúc
+
+**Pycaret**
+
+https://pycaret.gitbook.io/docs
+
+https://colab.research.google.com/drive/1C7AbOA7L1gfopuFzPtlG3yCXt1UAuIjz?usp=sharing&authuser=1
+
+- low-code libery, đơn giản và dễ dùng hơn
+
+# Buổi học 10: Unsupervised Learning – Cluster Analysis - KMeans (16/08/2024)
+
+https://people.revoledu.com/kardi/tutorial/Clustering/Numerical%20Example.htm?authuser=1
+
+## 1 Cluster Analysis 
+
+**Ví dụ**
+
+<img width="700" alt="Ảnh màn hình 2024-08-16 lúc 19 26 18" src="https://github.com/user-attachments/assets/ce1d4cfe-0582-4ef7-b0a0-8780f2aad8f7">
+
+**Ghi chú: trong Cluster Analysis**
+
+-  Không có khái niệm cluster "đúng"/sai, chỉ có phù hợp hơn
+
+**Một số thuật toán cluster**
+
+- K-Means clustering
+
+- GMM
+
+## 2. K-Means
+
+**Điều kiện dừng**
+
+- iterations = 100
+
+- centroid << theshold (khi thay đổi quá ít thì sẽ tự động dừng**
+
+**Trong trường hợp k có domain knowledge**
+
+**Hard (Kmeans) vs Soft clusering (GMM)**
