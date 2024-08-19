@@ -737,6 +737,8 @@ btvn: edit notebook này dựa trên gợi ý feature importance và oversamplin
 
 ### DEMO 2: Churn prediction using Random Forest and SMOTE
 
+https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html
+ 
 - SMOTE stands for Synthetic Minority Oversampling Technique. kỹ thuật ov sampling dựa trên KNN, tập trung vào nhãn minority.
 
 - SMOTE (Synthetic Minority Over-sampling Technique): Đây là một kỹ thuật dùng để xử lý vấn đề dữ liệu không cân bằng bằng cách tạo ra các mẫu mới từ lớp thiểu số. SMOTE tạo ra các mẫu tổng hợp bằng cách kết hợp các điểm gần nhau trong không gian đặc trưng, giúp cân bằng lại tỉ lệ giữa các lớp trong dữ liệu huấn luyện.
