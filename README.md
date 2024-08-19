@@ -824,21 +824,29 @@ https://www.kaggle.com/code/hongngcthuthng/comparison-of-catboost-and-one-hot-en
 
 https://www.kaggle.com/code/hongngcthuthng/svm-vs-xgboost-vs-random-forest
 
-## 1. Giới thiệu Boosting
+### Giới thiệu Boosting
 
+- Boosting" hỗ trợ cho các mô hình Machine Learning để cải thiện độ chính xác của dự đoán.
+
+- Boosting algorithm (Thuật toán tăng cường) là một trong những thuật toán được sử dụng khá rộng rãi nhằm mục đích tăng cường thuật toán để cải thiện độ chính xác của các mô hình.
+ 
 - Đây là một thuật toán học quần thể bằng cách xây dựng nhiều thuật toán cùng lúc (ví dụ như Decision Tree) và kết hợp chúng lại. Mục đích là để có một cụm hoặc một nhóm các 'weak learner' rồi kết hợp chúng lại để tạo ra một 'strong learner' duy nhất.
 
-## 2. AdaBoost
+## 1. AdaBoost (Adaptive Boosting)
 
 - AdaBoost (Adaptive Boosting) là một kỹ thuật boosting phổ biến giúp ta kết hợp nhiều 'weak classifier' (trình phân loại yếu) thành một 'strong classifier' (trình phân loại mạnh) duy nhất.
 
-- hoạt động trên tư duy sửa lỗi: model sau sẽ học tập dựa trên sai lầm của model trước 
+- hoạt động trên tư duy sửa lỗi: có 1 chuỗi model nối tiếp nhau, model sau sẽ học tập dựa trên sai lầm của model trước.
 
-## 3. Thuật toán AdaBoost
+### Thuật toán AdaBoost
 
-## 4. Xây dựng AdaBoost
+![Ảnh màn hình 2024-08-19 lúc 15 22 12](https://github.com/user-attachments/assets/f77d3c06-1927-4e2a-9679-c250fcdf1350)
 
-## 5. XGBoost
+![Ảnh màn hình 2024-08-19 lúc 15 23 19](https://github.com/user-attachments/assets/d44807a5-01f8-4e35-b339-4e8a2b38e8fb)
+
+<img width="525" alt="Ảnh màn hình 2024-08-19 lúc 15 25 52" src="https://github.com/user-attachments/assets/4de54674-09a0-42c5-a476-0b3f21e802ac">
+
+## 2. XGBoost
 
 https://www.youtube.com/watch?v=PxgVFp5a0E4&t=14s
 
@@ -846,13 +854,13 @@ https://www.youtube.com/watch?v=PxgVFp5a0E4&t=14s
 
 - hoạt động trên tư duy sửa lỗi: model sau sẽ dự đoán sai lầm của model trước 
 
-## 6. LightGBM
+## 3. LightGBM
 
 - dùng leaf-wise nên sẽ nhanh hơn XGBoost khoảng chừng 10 lần
 
 - dễ bị overfitting hơn XGBoost 
 
-## 7. CatBoost 
+## 4. CatBoost 
 
 https://www.youtube.com/watch?v=KXOTSkPL2X4
 
