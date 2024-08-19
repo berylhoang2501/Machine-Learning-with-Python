@@ -725,7 +725,7 @@ search "random forest feature importance."
 
 ### DEMO 1: Decision Tree & Random Forest with ClassWeight
 
-- ClassWeight là một kỹ thuật dùng để chống data imbalance bằng cách gán cho nhãn minority số điểm cao hơn. điều này giúp mô hình quan tâm nhiều hơn và học nhiều hơn đối với nhãn ít mẫu (ví dụ 90% nhãn survive 10% nhãn die)
+- ClassWeight là một kỹ thuật dùng để chống data imbalance bằng cách gán cho nhãn minority số điểm cao hơn. điều này giúp mô hình quan tâm nhiều hơn và học nhiều hơn đối với nhãn ít mẫu (ví dụ 90% nhãn survive 10% nhãn die). Class Weight: Phương pháp này liên quan đến việc điều chỉnh trọng số của các lớp trong quá trình huấn luyện mô hình. Điều này hữu ích khi bạn có dữ liệu không cân bằng, và bạn muốn mô hình tập trung hơn vào các lớp ít phổ biến hơn bằng cách tăng trọng số của chúng trong hàm mất mát.
 
 - nếu kaggle không cho chạy pandas profiling thì có thể dùng ydata-profiling cũng tương tự
 
@@ -733,10 +733,14 @@ search "random forest feature importance."
 
 btvn: edit notebook này dựa trên gợi ý feature importance và oversampling (có thể sử dụng pp SMOTE) để cải thiện model này
 
-- SMOTE stands for Synthetic Minority Oversampling Technique. kỹ thuật over sampling dựa trên KNN, tập trung vào nhãn minority.
+- Feature Importance: Đây là quá trình xác định và đánh giá tầm quan trọng của các đặc trưng (features) trong mô hình. Từ đó, bạn có thể chọn lọc những đặc trưng quan trọng nhất hoặc giảm bớt những đặc trưng ít quan trọng để giảm thiểu sự phức tạp của mô hình và cải thiện hiệu suất.
 
 ### DEMO 2: Churn prediction using Random Forest and SMOTE
 
+- SMOTE stands for Synthetic Minority Oversampling Technique. kỹ thuật ov sampling dựa trên KNN, tập trung vào nhãn minority.
+
+- SMOTE (Synthetic Minority Over-sampling Technique): Đây là một kỹ thuật dùng để xử lý vấn đề dữ liệu không cân bằng bằng cách tạo ra các mẫu mới từ lớp thiểu số. SMOTE tạo ra các mẫu tổng hợp bằng cách kết hợp các điểm gần nhau trong không gian đặc trưng, giúp cân bằng lại tỉ lệ giữa các lớp trong dữ liệu huấn luyện.
+- 
 - nói về cách sử dụng pp SMOTE trên mô hình
 
 <img width="455" alt="Ảnh màn hình 2024-08-08 lúc 10 34 00" src="https://github.com/user-attachments/assets/b5a3fbec-37aa-4878-814a-39b1dfbee864"> <img width="452" alt="Ảnh màn hình 2024-08-08 lúc 10 34 10" src="https://github.com/user-attachments/assets/ce13f325-64e3-4f80-9176-6b23410e72e8">
