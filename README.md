@@ -747,11 +747,9 @@ https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.
 
 <img width="455" alt="Ảnh màn hình 2024-08-08 lúc 10 34 00" src="https://github.com/user-attachments/assets/b5a3fbec-37aa-4878-814a-39b1dfbee864"> <img width="452" alt="Ảnh màn hình 2024-08-08 lúc 10 34 10" src="https://github.com/user-attachments/assets/ce13f325-64e3-4f80-9176-6b23410e72e8">
 
-# Buổi học 7: Boosting Techniques + SVM (9/08/2024)
+# Buổi học 7: SVM (9/08/2024)
 
-https://www.kaggle.com/code/hongngcthuthng/comparison-of-catboost-and-one-hot-encoding
-
-https://www.kaggle.com/code/hongngcthuthng/svm-vs-xgboost-vs-random-forest
+## 1. Giới thiệu
 
 - SVM (Support Vector Machine) là một mô hình Machine Learning rất mạnh mẽ và linh hoạt, có khả năng thực hiện phân loại tuyến tính hoặc phi
 tuyển, hồi quy và thậm chí phát hiện ngoại lệ.
@@ -762,27 +760,69 @@ tuyển, hồi quy và thậm chí phát hiện ngoại lệ.
 
 - Ngoài việc thực hiện phân loại tuyển tính, SVM có thể thực hiện hiệu quả phân loại phi tuyến tính bằng cách sử dụng "Kernel trick", ngầm ánh xạ các input vào không gian high-dimensional feature. (tránh được cruise of high dimensionality)
 
-## 1. Giới thiệu
-
 ## 2. Thuật toán
 
-**Linear SVM**
+- Trong machine learning, nhiệm vụ của mô hình SVM (Support Vector Machine) là phân loại dữ liệu. Cụ thể, SVM tìm ra một siêu phẳng (hyperplane) tốt nhất để phân chia dữ liệu thành các lớp khác nhau. Siêu phẳng này được chọn sao cho khoảng cách (margin) giữa nó và các điểm dữ liệu gần nhất của mỗi lớp là lớn nhất.
+
+<img width="636" alt="Ảnh màn hình 2024-08-19 lúc 14 45 26" src="https://github.com/user-attachments/assets/22a8142e-1efc-48f9-aa28-20f8da338148">
+
+- SVM phát biểu : bất kì mô hình nào có margin space rộng nhất thì sẽ là mô hình tốt nhất. Lý do: khi margin space lớn thì khả năng giảm nhiễu cao, giảm khả năng phân loại sai 
+
+**Hard-margin SVM (Linear SVM)**
+
+<img width="420" alt="Ảnh màn hình 2024-08-19 lúc 14 59 08" src="https://github.com/user-attachments/assets/74c19ad1-51c5-4ca1-8e4b-f0bc7cc8e5b3">
+
+Hard-margin SVM là một phiên bản của SVM được sử dụng khi dữ liệu có thể được phân tách hoàn toàn bằng một đường thẳng (hoặc siêu phẳng) mà không có lỗi. Cách nó hoạt động như sau:
+
+- Phân tách tuyến tính: Hard-margin SVM tìm kiếm một siêu phẳng (hyperplane) phân tách hoàn toàn hai lớp dữ liệu mà không có điểm nào bị phân loại sai.
+
+- Maximizing the Margin: SVM không chỉ tìm bất kỳ siêu phẳng nào mà cố gắng tối đa hóa khoảng cách (margin) giữa siêu phẳng đó và các điểm gần nhất thuộc hai lớp (các support vectors).
+
+- Không chấp nhận lỗi: Trong Hard-margin SVM, không có dữ liệu nào được phép nằm giữa hoặc bên phía sai của siêu phẳng. Điều này nghĩa là mô hình chỉ hoạt động tốt khi dữ liệu hoàn toàn có thể phân tách.
+
+Vì vậy, Hard-margin SVM thích hợp cho các tập dữ liệu mà hai lớp có thể được phân tách hoàn toàn mà không có bất kỳ sự chồng chéo nào.
 
 **Soft margin SVM**
 
+<img width="581" alt="Ảnh màn hình 2024-08-19 lúc 14 59 46" src="https://github.com/user-attachments/assets/853510dc-6e48-4a4e-bad6-4bf4be39f5bc">
+
+Soft-margin SVM là một phiên bản của SVM cho phép một số lỗi phân loại để tạo ra một mô hình linh hoạt hơn. Cách nó hoạt động như sau:
+
+- Cho phép lỗi: Soft-margin SVM cho phép một số điểm dữ liệu nằm sai phía của siêu phẳng (hyperplane) hoặc nằm trong vùng margin giữa hai lớp. Điều này giúp mô hình hoạt động tốt hơn khi dữ liệu không thể phân tách hoàn toàn.
+
+- Cân bằng giữa lỗi và margin: Mô hình cố gắng tối đa hóa khoảng cách (margin) giữa siêu phẳng và các điểm dữ liệu gần nhất, nhưng đồng thời cũng cho phép một số điểm vi phạm margin (tức là bị phân loại sai). Số lượng và mức độ vi phạm được điều chỉnh bởi một tham số C, giúp cân bằng giữa việc có một margin lớn và số lượng lỗi.
+
+- Tính linh hoạt: Nhờ việc cho phép một số điểm dữ liệu bị phân loại sai, Soft-margin SVM linh hoạt hơn trong việc xử lý các tập dữ liệu có nhiễu hoặc không thể phân tách hoàn toàn.
+
+Tóm lại, Soft-margin SVM giúp mô hình không quá cứng nhắc, làm việc tốt hơn với dữ liệu thực tế có chứa nhiễu hoặc không thể phân tách rõ ràng.
+
 **The “Kernel Trick”**
 
-## 3. Ưu/khuyết điểm
+- một số tình huống ở không gian thấp chiều thì các điểm không phân tách nhau ra rõ ràng đươch thế những khi đưa các điểm đó vào không gian 3 chiều thì lại có thể phân tách rõ ràng được
 
-- thường là mô hình đầu tay để dùng khảo sát trên tập dữ liệu
+<img width="716" alt="Ảnh màn hình 2024-08-19 lúc 15 01 49" src="https://github.com/user-attachments/assets/2d553dcd-01c2-42d2-8a9c-7fb111bcc11f">
+
+## 3. Ưu/khuyết điểm
 
 **Ưu điểm**
 
 <img width="843" alt="Ảnh màn hình 2024-08-09 lúc 19 00 42" src="https://github.com/user-attachments/assets/22acbb49-c53b-4f43-94f8-6371d344fbf0">
 
+- thường là mô hình đầu tay để dùng khảo sát độ khó trên tập dữ liệu
+
+- nếu áp dụng svm cho ra điểm số thấp thì chúng ta có thể thấy được đây là một bài toán thật sự phức tạp
+
+**Khuyết điểm**
+
+<img width="700" alt="Ảnh màn hình 2024-08-19 lúc 15 05 17" src="https://github.com/user-attachments/assets/aaa472d6-6deb-42e6-843c-6f32cbb5d790">
+
 ## 4. Xây dựng SVMs sử dụng sklearn
 
-# Boosting
+# Buổi học 7: Boosting Techniques (9/08/2024)
+
+https://www.kaggle.com/code/hongngcthuthng/comparison-of-catboost-and-one-hot-encoding
+
+https://www.kaggle.com/code/hongngcthuthng/svm-vs-xgboost-vs-random-forest
 
 ## 1. Giới thiệu Boosting
 
