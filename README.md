@@ -740,7 +740,7 @@ btvn: edit notebook này dựa trên gợi ý feature importance và oversamplin
 - SMOTE stands for Synthetic Minority Oversampling Technique. kỹ thuật ov sampling dựa trên KNN, tập trung vào nhãn minority.
 
 - SMOTE (Synthetic Minority Over-sampling Technique): Đây là một kỹ thuật dùng để xử lý vấn đề dữ liệu không cân bằng bằng cách tạo ra các mẫu mới từ lớp thiểu số. SMOTE tạo ra các mẫu tổng hợp bằng cách kết hợp các điểm gần nhau trong không gian đặc trưng, giúp cân bằng lại tỉ lệ giữa các lớp trong dữ liệu huấn luyện.
-- 
+ 
 - nói về cách sử dụng pp SMOTE trên mô hình
 
 <img width="455" alt="Ảnh màn hình 2024-08-08 lúc 10 34 00" src="https://github.com/user-attachments/assets/b5a3fbec-37aa-4878-814a-39b1dfbee864"> <img width="452" alt="Ảnh màn hình 2024-08-08 lúc 10 34 10" src="https://github.com/user-attachments/assets/ce13f325-64e3-4f80-9176-6b23410e72e8">
