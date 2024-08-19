@@ -613,7 +613,7 @@ ghép những step trong preprocessing, step trong mô hình vào chung 1 chỗ 
 
 <img width="489" alt="Ảnh màn hình 2024-08-04 lúc 10 05 58" src="https://github.com/user-attachments/assets/11db227c-4567-4bee-91e1-a39398dc13f9"> <img width="493" alt="Ảnh màn hình 2024-08-04 lúc 10 04 37" src="https://github.com/user-attachments/assets/982ade70-2a5f-4fa0-9b18-4b6dea8ad267">
 
-# Buổi học 6: Decision Tree & Random Forest (7/08/2024)
+# Buổi học 6: Supervised Learning - Decision Tree & Random Forest (7/08/2024)
 
 https://www.datascienceprophet.com/understanding-the-mathematics-behind-the-decision-tree-algorithm-part-i/?authuser=1
 
@@ -747,7 +747,7 @@ https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.
 
 <img width="455" alt="Ảnh màn hình 2024-08-08 lúc 10 34 00" src="https://github.com/user-attachments/assets/b5a3fbec-37aa-4878-814a-39b1dfbee864"> <img width="452" alt="Ảnh màn hình 2024-08-08 lúc 10 34 10" src="https://github.com/user-attachments/assets/ce13f325-64e3-4f80-9176-6b23410e72e8">
 
-# Buổi học 7: SVM (9/08/2024)
+# Buổi học 7: Supervised Learning - SVM (9/08/2024)
 
 ## 1. Giới thiệu
 
@@ -836,6 +836,8 @@ https://www.kaggle.com/code/hongngcthuthng/svm-vs-xgboost-vs-random-forest
 
 - AdaBoost (Adaptive Boosting) là một kỹ thuật boosting phổ biến giúp ta kết hợp nhiều 'weak classifier' (trình phân loại yếu) thành một 'strong classifier' (trình phân loại mạnh) duy nhất.
 
+- base model có thể là bất kì mô hình machine learning nào
+
 - hoạt động trên tư duy sửa lỗi: có 1 chuỗi model nối tiếp nhau, model sau sẽ học tập dựa trên sai lầm của model trước.
 
 ### Thuật toán AdaBoost
@@ -846,25 +848,63 @@ https://www.kaggle.com/code/hongngcthuthng/svm-vs-xgboost-vs-random-forest
 
 <img width="525" alt="Ảnh màn hình 2024-08-19 lúc 15 25 52" src="https://github.com/user-attachments/assets/4de54674-09a0-42c5-a476-0b3f21e802ac">
 
-## 2. XGBoost
+## 2. XGBoost (thuộc nhóm Gradient Boosting(
 
 https://www.youtube.com/watch?v=PxgVFp5a0E4&t=14s
 
+- XGBoost không chỉ là một model mà còn là 1 thư viện machine learning like numpy, tensorflow, pytorch.
+
+- XGBoost là One of the Popular Tools of Winners is XGBoost.
+ 
 - base model của XGBoost là decision tree
 
-- hoạt động trên tư duy sửa lỗi: model sau sẽ dự đoán sai lầm của model trước 
+- hoạt động trên tư duy sửa lỗi: model sau sẽ DỰ ĐOÁN sai lầm của model trước
+
+- XGBoost là một thuật toán "boosting," có nghĩa là nó xây dựng một loạt các cây quyết định (decision trees) theo tuần tự, mỗi cây mới được thêm vào để sửa lỗi của cây trước đó.
+
+![Ảnh màn hình 2024-08-19 lúc 16 22 54](https://github.com/user-attachments/assets/98cd1a17-05ac-4646-bce8-01c805074763)
 
 ## 3. LightGBM
 
-- dùng leaf-wise nên sẽ nhanh hơn XGBoost khoảng chừng 10 lần
+https://sefiks.com/2020/05/13/xgboost-vs-lightgbm/
 
-- dễ bị overfitting hơn XGBoost 
+- XGBoost khi train từng cây decision tree thì sử dụng tư duy level wise còn Light BGM sử dụng tư duy  leaf wise
+
+**Level-wise (XGBoost)**
+
+- Khi train 1 cây decision tree mà muốn rẽ xuống nhánh phía dứoi thì phải đợi cho tất cả các nhánh (node) phía trên hoàn thành hết thì mới được di chuyển xuống phía dưới
+
+**Leaf-wise (Light GBM)**
+
+- Leaf-wise nghĩa là LightGBM mở rộng cây bằng cách chọn nút lá có độ lợi cao nhất (largest gain) để chia nhỏ trước, thay vì mở rộng tất cả các nút cùng cấp độ.
+
+- Light GBM dùng tư duy leaf-wise nên sẽ nhanh hơn XGBoost khoảng chừng 10 lần
+
+Trong điều kiện lý tưởng với thời gian và tài nguyên vô hạn, cả Level-wise (XGBoost) và Leaf-wise (LightGBM) có thể đạt được kết quả tương tự, vì cả hai sẽ xây dựng được các cây quyết định tốt nhất có thể để tối ưu hóa hiệu suất mô hình. Tuy nhiên, nếu bạn giới hạn số lượng iterations (ví dụ: chỉ cho phép 300 iterations), kết quả sẽ khác nhau 
+
+**Khuyết điểm của Light GBM**
+
+- dễ bị overfitting hơn XGBoost
 
 ## 4. CatBoost 
 
 https://www.youtube.com/watch?v=KXOTSkPL2X4
 
+![Ảnh màn hình 2024-08-19 lúc 20 33 41](https://github.com/user-attachments/assets/dfc15462-3d7f-42aa-9b65-cbd8298cffe9)
+
+![Ảnh màn hình 2024-08-19 lúc 20 36 49](https://github.com/user-attachments/assets/363e9107-e869-49b5-9a89-773509129797)
+
+- CatBoost Encoder sử dụng Ordered Target Mean Encoding. Điều này có nghĩa là nó chỉ sử dụng các thông tin từ dữ liệu trước đó để mã hóa từng điểm dữ liệu hiện tại, giúp tránh việc mô hình học thuộc (overfitting) từ toàn bộ dữ liệu huấn luyện.
+ 
+- CatBoost tiên tiến hơn trong xử lý biến categorical nhờ khả năng xử lý trực tiếp mà không cần mã hóa, sử dụng phương pháp Ordered Boosting để giảm overfitting, và tích hợp các kỹ thuật giảm sai số, giúp nó hoạt động hiệu quả hơn trên các tập dữ liệu có nhiều biến phân loại.
+
 - cơ chế xử lý biến categorical
+
+**Ích lợi**
+
+- Tăng cường sự khác biệt giữa các mẫu -> tăng cường mối quan hệ giữa target variable -> tăng cường độ chính xác cho mô hình
+
+- Khi chuyển về giá trị số sẽ dễ dàng áp dụng các phương pháp áp dụng cho biến numberical (mean, mode,...)
 
 ### DEMO 1: SVM vs XGBoost vs Random Forest
 
