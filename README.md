@@ -820,10 +820,6 @@ Tóm lại, Soft-margin SVM giúp mô hình không quá cứng nhắc, làm vi�
 
 # Buổi học 7: Boosting Techniques (9/08/2024)
 
-https://www.kaggle.com/code/hongngcthuthng/comparison-of-catboost-and-one-hot-encoding
-
-https://www.kaggle.com/code/hongngcthuthng/svm-vs-xgboost-vs-random-forest
-
 ### Giới thiệu Boosting
 
 - Boosting" hỗ trợ cho các mô hình Machine Learning để cải thiện độ chính xác của dự đoán.
@@ -908,9 +904,30 @@ https://www.youtube.com/watch?v=KXOTSkPL2X4
 
 ### DEMO 1: SVM vs XGBoost vs Random Forest
 
+https://scikit-learn.org/stable/api/sklearn.svm.html
+
+https://www.kaggle.com/code/hongngcthuthng/svm-vs-xgboost-vs-random-forest
+
+<img width="565" alt="Ảnh màn hình 2024-08-19 lúc 20 59 42" src="https://github.com/user-attachments/assets/369ce681-1fcc-4774-bfb3-89dc7ba0f2d3">
+
+- khi rơi vào 2 tình huống:
+
+tình huống A: all feature -> 95 điểm 
+
+tình huống B: drop 4 feature -> 95 điểm 
+
+-> vẫn nên drop vì 4 feature đó không quá quan trọng vì vẫn giữ nguyên performance, drop sẽ giúp mô hình chạy nhanh hơn 
+
 ### DEMO 2: Comparison of catboost and one-hot encoding
 
+https://www.kaggle.com/code/hongngcthuthng/comparison-of-catboost-and-one-hot-encoding
+
+**Cách dùng Cat boost**
 https://www.geeksforgeeks.org/categorical-encoding-with-catboost-encoder/
+
+- This may prove that when we use random forest, GBDT, XGBoost, LightGBM and other tree model classification, we should probably reduce the use of one-hot encoding.
+
+=> từ sau khi sử dụng các mô hình như random forest, GBDT, XGBoost, LightGBM thì đừng dùng các cách mã hoá như bình thường nữa mà hãy sử dụng catboost catboost encoding
 
 <img width="497" alt="Ảnh màn hình 2024-08-09 lúc 20 50 04" src="https://github.com/user-attachments/assets/10911f8b-acf0-4655-af68-d2067985fcd8">
 
