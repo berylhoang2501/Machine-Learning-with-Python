@@ -1002,3 +1002,34 @@ https://people.revoledu.com/kardi/tutorial/Clustering/Numerical%20Example.htm?au
 **Trong trường hợp k có domain knowledge**
 
 **Hard (Kmeans) vs Soft clusering (GMM)**
+
+# Buổi học 11: Unsupervised Learning – Cluster Analysis - GMM (18/08/2024)
+
+https://www.analyticsvidhya.com/blog/2019/10/gaussian-mixture-models-clustering/
+
+## 1. Dẫn nhập
+
+## 2. Phân phối Gaussian
+
+## 3. Mô hình Gaussian hỗn hợp (GMM)
+
+## 4. Thuật toán EM (Kỳ vọng - Cực đại)
+
+## 5. Ưu/khuyết điểm
+
+## 6. Xây dựng GMM
+
+# Buổi học 11: Unsupervised Learning - PCA (Principal ComponentAnalysis) (18/08/2024)
+
+## 1. Dimensionality 
+
+- hạn chế việc information loss nhất có thể khi giảm chiều dữ liệu
+
+## 2. Reduction
+
+## 3. Giới thiệu PCA
+
+## 4. Ưu/khuyết điểm
+
+## 5. Xây dựng PCA
+
