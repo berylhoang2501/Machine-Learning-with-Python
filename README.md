@@ -945,11 +945,23 @@ https://www.deeplearningbook.org/contents/numerical.html
 
 ## 1. Giới thiệu về Pytorch
 
+**Một số tính năng nổi trội của Pytorch**
+
+- Native ONNX Support
+
+- Flexible Data Classes & DataLoader
+
 **Tensor**
 
 - Thành phần cơ bản nhất của Pytorch là Tensor.
 
-**Thử tính đạo hàm với Pytorch**
+- Về cơ bản, Tensor tương tự như Ndarray trong Numpy, nhưng có thể được tính toán nhanh hơn nhờ vào việc tăng tốc với GPU.
+
+**Tensor & Vector**
+
+![Ảnh màn hình 2024-08-22 lúc 14 02 58](https://github.com/user-attachments/assets/3f493a99-4397-4b5a-8f9f-c97d972b0a5a)
+
+**Tensor & Differentiation(Tính đạo hàm với Pytorch)**
 
 <img width="1267" alt="Ảnh màn hình 2024-08-10 lúc 09 03 15" src="https://github.com/user-attachments/assets/f325b4db-2853-43da-aa74-f2ad2d4b84ba">
 
