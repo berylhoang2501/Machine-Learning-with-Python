@@ -965,11 +965,33 @@ https://www.deeplearningbook.org/contents/numerical.html
 
 <img width="1267" alt="Ảnh màn hình 2024-08-10 lúc 09 03 15" src="https://github.com/user-attachments/assets/f325b4db-2853-43da-aa74-f2ad2d4b84ba">
 
+f.backward() là câu lệnh tự tính đạo hàm
+
 ## 2. Giới thiệu về Neural Network
 
-<img width="897" alt="Ảnh màn hình 2024-08-10 lúc 09 07 41" src="https://github.com/user-attachments/assets/6c89d548-7c65-4555-bd9a-0c83eb97a7c4">
+- Neural Network là 1 thuật toán được đề xuất để mô phỏng hoạt động của các neural thần kinh trong bộ não con người.
 
-<img width="1245" alt="Ảnh màn hình 2024-08-10 lúc 09 20 53" src="https://github.com/user-attachments/assets/1e7c9a8c-8b13-472f-b9bc-141d23e76b3a">
+- Đây là thuật toán lõi trong deep learning
+
+- Mạng neural network đơn giản nhất được gọi là Perceptron.
+
+- Cấu tạo của 1 mạng neural network gồm 1 lớp input, 1 lớp output và 1 hoặc nhiều lớp hidden.
+
+- Mỗi node trong 1 lớp còn được gọi là 1 neural, mỗi neural trong lớp hiện tại sẽ được link tới toàn bộ neural của lớp tiếp theo, tạo thành 1 mạng lưới neural thần kinh dày đặc (dense neural network).
+
+**Cấu tạo của 1 neural network**
+
+![Ảnh màn hình 2024-08-22 lúc 14 15 57](https://github.com/user-attachments/assets/dab3258b-5b5a-49cd-9ebb-4af70ff8974f)
+
+- Chúng ta tiến hành mổ xẻ cách hoạt động của 1 neural:
+
+![Ảnh màn hình 2024-08-22 lúc 14 18 58](https://github.com/user-attachments/assets/4a6f1883-91f9-440b-b2fa-f820a7b677bd)
+
+gồm bộ phận tiếp nhận và bộ phận trả kết quả. bộ phận trả kết qủa sẽ có nhiệm vụ lấy kết quả mà bộ phận tiếp nhận vừa tính đem đi qua hàm g (hàm sidmoid) để kích hoạt kết quả đó. 
+
+<img width="1086" alt="Ảnh màn hình 2024-08-22 lúc 14 21 55" src="https://github.com/user-attachments/assets/925d9fba-e44f-4460-9b96-9e28f2d611d2">
+
+![Ảnh màn hình 2024-08-22 lúc 14 23 17](https://github.com/user-attachments/assets/790302d9-1e9b-48f3-8f17-a5b03c02ac52)
 
 - Vai trò của Activation Function: đưa sự phi tuyến vào mô hình, chuẩn hoá giá trị đầu ra, tăng tốc độ học,..
 
