@@ -1001,11 +1001,15 @@ f.backward() là câu lệnh tự tính đạo hàm
 
 - Forward Propagation là quá trình tính toán đầu ra của mạng dựa trên đầu vào. Quá trình này diễn ra từ lớp đầu vào (input layer), qua các lớp ẩn (hidden layers), và cuối cùng đến lớp đầu ra (output layer). Mỗi nút trong lớp này sẽ nhận giá trị từ các nút của lớp trước đó, nhân với các trọng số (weights), cộng thêm một bias, sau đó áp dụng một hàm kích hoạt (activation function) để tính toán giá trị đầu ra.
 
+- Cơ chế feed forward giúp tính toán giá trị output của mạng neural network.
+
 ## 3. Thuật toán Back Propagation
 
 - còn gọi là loss function, objective function, cost function
 
 - Tác dụng: nhận nhãn thực tế và kết quả mô hình dự đoán (y,y^) = numerical = z. khi độ lỗi/sai số lớn thì z càng lớn và ngược lại. thuật toán này sẽ tìm bộ trọng số thích hợp sao cho giá trị "Loss Value" (hay còn gọi là hàm lỗi) càng nhỏ càng tốt
+
+- Cơ chế backpropagation giúp tính toán các đạo hàm cần thiết, để từ đó Gradient Descent sẽ update các trọng số trong mô hình.
 
 <img width="685" alt="Ảnh màn hình 2024-08-10 lúc 09 24 31" src="https://github.com/user-attachments/assets/01e649fb-f862-46e4-8574-1ac91c7f0464">
 
@@ -1089,7 +1093,6 @@ Góp phần hạn chế gradient vanishing (trái ngược với gradient vanish
 https://www.kaggle.com/code/hongngcthuthng/pytorch-mlp-mnist?scriptVersionId=192013873
 
 CHUẨN BỊ DATA
-
 
 - Bước 1: tạo data set class để đọc data
 
