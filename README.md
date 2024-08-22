@@ -406,7 +406,7 @@ https://www.kaggle.com/datasets/crawford/emnist?select=emnist-mnist-test.csv
 
 ## 2. Gradient Descent trong Python
 
-- Thuật toán này dùng để tối ưu hoá 1 hàm số nào đó bằng cách sử dụng đạo hàm
+- Thuật toán này dùng để tối ưu hoá 1 hàm số nào đó bằng cách sử dụng đạo hàm. Mục tiêu của Gradient Descent là tìm giá trị tối thiểu của một hàm mất mát (loss function) bằng cách điều chỉnh các tham số của mô hình (ví dụ như các trọng số trong mạng nơ-ron).
 
 - Gradient descent là xương sống của các thuật toán Machine Learning.
 
@@ -985,21 +985,29 @@ f.backward() là câu lệnh tự tính đạo hàm
 
 - Chúng ta tiến hành mổ xẻ cách hoạt động của 1 neural:
 
-![Ảnh màn hình 2024-08-22 lúc 14 18 58](https://github.com/user-attachments/assets/4a6f1883-91f9-440b-b2fa-f820a7b677bd)
+1 neural gồm bộ phận tiếp nhận và bộ phận trả kết quả. bộ phận trả kết qủa sẽ có nhiệm vụ lấy kết quả mà bộ phận tiếp nhận vừa tính đem đi qua hàm g (hàm sidmoid) để kích hoạt kết quả đó. 
 
-gồm bộ phận tiếp nhận và bộ phận trả kết quả. bộ phận trả kết qủa sẽ có nhiệm vụ lấy kết quả mà bộ phận tiếp nhận vừa tính đem đi qua hàm g (hàm sidmoid) để kích hoạt kết quả đó. 
-
-<img width="1086" alt="Ảnh màn hình 2024-08-22 lúc 14 21 55" src="https://github.com/user-attachments/assets/925d9fba-e44f-4460-9b96-9e28f2d611d2">
+<img width="886" alt="Ảnh màn hình 2024-08-22 lúc 14 21 55" src="https://github.com/user-attachments/assets/925d9fba-e44f-4460-9b96-9e28f2d611d2">
 
 ![Ảnh màn hình 2024-08-22 lúc 14 23 17](https://github.com/user-attachments/assets/790302d9-1e9b-48f3-8f17-a5b03c02ac52)
 
+**Tại sao chúng ta cần có Activation Function (hàm g)**
+
+- kết quả của hàm g chính là output của neural
+ 
 - Vai trò của Activation Function: đưa sự phi tuyến vào mô hình, chuẩn hoá giá trị đầu ra, tăng tốc độ học,..
+
+**Forward Propagation**
+
+- Forward Propagation là quá trình tính toán đầu ra của mạng dựa trên đầu vào. Quá trình này diễn ra từ lớp đầu vào (input layer), qua các lớp ẩn (hidden layers), và cuối cùng đến lớp đầu ra (output layer). Mỗi nút trong lớp này sẽ nhận giá trị từ các nút của lớp trước đó, nhân với các trọng số (weights), cộng thêm một bias, sau đó áp dụng một hàm kích hoạt (activation function) để tính toán giá trị đầu ra.
 
 ## 3. Thuật toán Back Propagation
 
-<img width="685" alt="Ảnh màn hình 2024-08-10 lúc 09 24 31" src="https://github.com/user-attachments/assets/01e649fb-f862-46e4-8574-1ac91c7f0464">
+- còn gọi là loss function, objective function, cost function
 
-- tìm bộ trọng số thích hợp sao cho giá trị "Loss Value" (hay còn gọi là hàm lỗi) càng nhỏ càng tốt trong thuật toán Backpropagation
+- Tác dụng: nhận nhãn thực tế và kết quả mô hình dự đoán (y,y^) = numerical = z. khi độ lỗi/sai số lớn thì z càng lớn và ngược lại. thuật toán này sẽ tìm bộ trọng số thích hợp sao cho giá trị "Loss Value" (hay còn gọi là hàm lỗi) càng nhỏ càng tốt
+
+<img width="685" alt="Ảnh màn hình 2024-08-10 lúc 09 24 31" src="https://github.com/user-attachments/assets/01e649fb-f862-46e4-8574-1ac91c7f0464">
 
 **Stochastic Gradient Descent**
 
@@ -1007,7 +1015,11 @@ gồm bộ phận tiếp nhận và bộ phận trả kết quả. bộ phận t
 
 **Batch Gradient Descent**
 
+<img width="1032" alt="Ảnh màn hình 2024-08-22 lúc 15 12 10" src="https://github.com/user-attachments/assets/3921a68d-390c-450b-a230-52b6c45178e3">
+
 **Mini-batch Gradient Descent**
+
+<img width="1022" alt="Ảnh màn hình 2024-08-22 lúc 15 15 56" src="https://github.com/user-attachments/assets/86d24fad-71b7-495c-8212-c726acb65678">
 
 - sự kết hợp giữa 2 pp trên.
 
@@ -1017,6 +1029,15 @@ sử dụng mini batch gradient decent. batchsize = 32 mẫu, N = 320 mẫu. c�
 
 ## 4. Các thành phần của Neural Network
 
+![Ảnh màn hình 2024-08-22 lúc 15 20 35](https://github.com/user-attachments/assets/f5101ad0-1033-4cef-b6cb-fae1a5e93986)
+- dense layer = fully connected layer. Dense layer hay còn gọi là Fully connected layer là 1 lớp của mạng neural network. Mỗi dense layer gồm nhiều node gọi là các neural, mà trong đó mỗi neural sẽ nhận đầu vào là các neural thuộc lớp trước đó.
+
+**Hiện tượng Gradient Vanishing là gì?**
+
+Gradient vanishing xảy ra khi các gradient (đạo hàm của hàm mất mát theo các trọng số) trở nên rất nhỏ trong quá trình truyền ngược (backpropagation), đặc biệt là ở các lớp gần đầu vào của mạng. Khi gradient trở nên quá nhỏ, các trọng số của các lớp này không được cập nhật một cách đáng kể trong quá trình huấn luyện, dẫn đến mạng không học được hoặc học rất chậm.
+
+**Các hàm kích hoạt thông dụng:**
+
 - Công dụng của hàm kích hoạt:
 
 Đưa sự phi tuyến tính vào mô hình
@@ -1025,13 +1046,15 @@ Giúp giới hạn output của neural
 
 Góp phần hạn chế gradient vanishing (trái ngược với gradient vanishing là exploding gradient)
 
-**Hiện tượng Gradient Vanishing là gì?**
-
-Gradient vanishing xảy ra khi các gradient (đạo hàm của hàm mất mát theo các trọng số) trở nên rất nhỏ trong quá trình truyền ngược (backpropagation), đặc biệt là ở các lớp gần đầu vào của mạng. Khi gradient trở nên quá nhỏ, các trọng số của các lớp này không được cập nhật một cách đáng kể trong quá trình huấn luyện, dẫn đến mạng không học được hoặc học rất chậm.
-
-**Các hàm kích hoạt thông dụng:**
-
 <img width="947" alt="Ảnh màn hình 2024-08-10 lúc 10 22 21" src="https://github.com/user-attachments/assets/4dbc70b7-1eae-481f-a15c-35621a3ba276">
+
+**Một số nguyên tắc:**
+
+- Trong bài toán Binary Classification, giả sử neural network tại lớp output chỉ có 1 neural => dùng sigmoid làm hàm kích hoạt (vì hàm này giới hạn output từ 0-1)
+
+- Trong bài toán Multiclass classification, giả sử neural network tại lớp output có nhiều neural => dùng hàm softmaxlàm hàm kích hoạt.
+
+**Công thức của hàm Softmax**
 
 <img width="855" alt="Ảnh màn hình 2024-08-10 lúc 10 33 37" src="https://github.com/user-attachments/assets/b3859b7d-f256-46a1-9a89-f5e9221ed81e">
 
@@ -1039,19 +1062,25 @@ Gradient vanishing xảy ra khi các gradient (đạo hàm của hàm mất mát
 
 **Hàm lỗi (Loss function)**
 
+- Hàm lỗi hay còn gọi là hàm mất mát (cost function) là 1 thành phần bắt buộc phải xác định trong mọi mạng neural network.
+
 - Một số hàm lỗi thông dụng cho bài toán classification: binary cross entropy và categorical cross entropy.
+
+<img width="1009" alt="Ảnh màn hình 2024-08-22 lúc 15 39 09" src="https://github.com/user-attachments/assets/f600c107-c6de-4fae-b8a7-c22b02ee3427">
 
 **Optimizer**
 
-- Optimizer (hàm tối ưu) là các hàm được dùng để tỉnh chỉnh trọng số của mô hình.
+- Optimizer (hàm tối ưu) là các hàm được dùng để tinh chỉnh trọng số của mô hình.
+
+- Trong các phần trên, chúng ta đã tìm hiểu về thuật toán Gradient Descent, trên thực tế, ngoài Gradient Descent còn nhiều thuật toán tối ưu khác mà thư viện Pytorch hỗ trợ: Adam, Adagrad, RMSProp…
 
 - khuyên dùng  thuật toán tối ưu Adam
 
 **Hyperparameters vs Parameters**
 
-![Ảnh màn hình 2024-08-10 lúc 10 40 27](https://github.com/user-attachments/assets/3d3d70b0-45a7-460f-8e1b-d0118a24bf2f)
+- Parameters là từ chỉ chung các trọng số của mô hình mà chúng ta phải update
 
-- Hyperparameters không update đc mà phải dùng pp tunning
+- Hyperparameters là từ chỉ các tham số phải được xác định trước khi quá trình training bắt đầu. (Ví dụ: Số lượng epoch, Batch size, Cấu trúc của mô hình (số lượng hidden layers, số lượng node trong 1 layer…), Các tham số của hàm mất mát, Learning rate…). Hyperparameters không update được mà phải dùng các phương pháp tunning để tìm ra bộ trọng số tốt nhất. 
 
 # Buổi học 9: Neural Network (tt) (11/08/2024)
 
