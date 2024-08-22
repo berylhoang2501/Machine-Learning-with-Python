@@ -1144,3 +1144,43 @@ https://www.analyticsvidhya.com/blog/2019/10/gaussian-mixture-models-clustering/
 
 ## 5. Xây dựng PCA
 
+# Buổi học 12: Unsupervised Learning - PCA (Principal ComponentAnalysis) (21/08/2024) (tt)
+
+https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html
+
+## DEMO: Solution 
+
+## DEMO 1: 
+## What is shihoutte score?
+
+# Buổi học 12: Time Series Forecasting - ARIMA (21/08/2024)
+
+## 1. Giới thiệu
+
+- giá vàng, giá gạo,..
+
+- ứng dụng vào bài toán như predictive maintainance
+
+- điều kiện của data dạng time series:
+
+data có yếu tố về thời gian, data dạng chuỗi (series/sequences), không nhất thiết phải ở dạng numberical mà còn là categorical, binary, hình,..
+
+- ARIMA (Auto Regressive/Integrated/Moving Average)
+
+**Auto Regressive**
+
+- "tự động hồi quy"
+
+**Integrated**
+
+- 
+**Moving Average**
+
+**ARIMA theo mùa (seasonal)**
+
+**ARIMA không theo mùa (non-seasonal)**
+
+## 2. Dự đoán - thuật toán
+
+## 3. Áp dụng auto_arima xây dựng mô hình ARIMA
+
