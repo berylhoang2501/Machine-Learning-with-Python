@@ -1326,3 +1326,31 @@ Stationary data (dữ liệu tĩnh) là một chuỗi thời gian có các đặ
 **AIC (The Akaike information criterion):**
 
 - Giá trị AIC cho phép so sánh mô hình phù hợp với  dữ liệu và tính đến độ phức tạp của mô hình, vì vậy các mô hình phù hợp hơn trong khi sử dụng ít tính năng hơn sẽ nhận được điểm AIC tốt hơn (thấp hơn) các mô hình tương tự sử dụng nhiều tính năng hơn
+
+# Buổi học 13: Time Series Forecasting - ARIMA (tt) + LSTM  (21/08/2024)
+
+**DEMO Time Series Forecasting - ARIMA**
+
+https://www.capitalone.com/tech/machine-learning/understanding-arima-models/?authuser=0
+
+## LSTM
+
+https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+
+nếu muốn sửa lại thành dữ đoán nhiều loại sản phẩm cùng 1 lúc thì có thể sửa chỗ này trong notebook
+
+![Ảnh màn hình 2024-08-23 lúc 18 50 45](https://github.com/user-attachments/assets/529e2055-2253-4bc5-ae0b-220ac34ee0e1)
+
+**Recurrent neural network**
+
+- dạng rolling
+
+- dùng để xử lý data dạng chuỗi (time series, NLP,...)
+
+- Word prediction, auto suggestion,.. (dựa vào những thông tin đã có sẽ dự đoán ra những thông tin tiếp theo)
+
+<img width="677" alt="Ảnh màn hình 2024-08-23 lúc 19 04 37" src="https://github.com/user-attachments/assets/c7736fb3-7c85-493e-823e-56dd798d1086">
+
+**DEMO LSTM**
+
+https://www.kaggle.com/code/ericle3121/time-series-analysis-using-lstm-keras/notebook
