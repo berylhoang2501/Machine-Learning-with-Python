@@ -1223,7 +1223,7 @@ https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixtur
 
 ## 1. Giới thiệu
 
-- giá vàng, giá gạo,..
+- time series là dữ liệu dạng chuỗi, ví dụ giá vàng, giá gạo,..
 
 - ứng dụng vào bài toán như predictive maintainance
 
@@ -1231,22 +1231,98 @@ https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixtur
 
 data có yếu tố về thời gian, data dạng chuỗi (series/sequences), không nhất thiết phải ở dạng numberical mà còn là categorical, binary, hình,..
 
-- ARIMA (Auto Regressive/Integrated/Moving Average)
+### ARIMA là viết tắt của Auto Regressive Integrated Moving Average**
 
-**Auto Regressive**
+ARIMA kết hợp ba khái niệm chính:
 
-- "tự động hồi quy"
+**AutoRegressive (AR) - Tự hồi quy**
+
+- "tự động hồi quy". AutoRegressive (AR) là một cách để dự đoán giá trị tương lai của một chuỗi thời gian bằng cách sử dụng thông tin từ các giá trị trong quá khứ của chính chuỗi đó.
+
+- ví dụ: Giả sử bạn muốn dự đoán nhiệt độ hôm nay dựa trên nhiệt độ của những ngày trước đó. Nếu bạn dùng nhiệt độ của ngày hôm qua để dự đoán nhiệt độ hôm nay, đó là một mô hình AR(1) (tự hồi quy bậc 1). Nếu bạn dùng nhiệt độ của hai ngày trước đó để dự đoán nhiệt độ hôm nay, đó là một mô hình AR(2).
 
 **Integrated**
 
-- 
-**Moving Average**
+**Moving Average - Trung bình trượt**
+
+- Moving Average (MA) là một mô hình dự báo trong đó giá trị hiện tại của chuỗi thời gian được xác định bằng cách sử dụng trung bình có trọng số của các sai số trong quá khứ.
+
+### ARIMA có 2 loại: 
+
+Để kiểm nghiệm xem data có tính seasonality không thì sẽ có phép thử chứ không cần thiết phải thực hiện theo cảm tính 
 
 **ARIMA theo mùa (seasonal)**
 
+- Được sử dụng khi chuỗi thời gian có các yếu tố mùa vụ rõ ràng. Ví dụ, khi bạn dự đoán doanh số bán hàng có chu kỳ tăng cao vào mùa lễ hội hoặc giảm mạnh vào mùa hè.
+
+- Nếu mô hình có thành phần theo mùa, chúng ta sử dụng mô hình ARIMA theo mùa (SARIMA). Trong trường hợp đó, sẽ có một bộ tham số khác: P, Dvà Q mô tả các liên kết tương tự như p, d và q, nhưng tương ứng với các thành phần theo mùa của mô hình (Seasonal model)
+
 **ARIMA không theo mùa (non-seasonal)**
+
+- Được sử dụng khi chuỗi thời gian không có yếu tố mùa rõ rệt. Ví dụ, khi bạn dự đoán doanh số bán hàng không bị ảnh hưởng bởi các yếu tố mùa vụ.
 
 ## 2. Dự đoán - thuật toán
 
+- Time Series có một số tính năng chính như xu hướng (trend), tính thời vụ (seasonality) và nhiễu (noise). (noise ở đây chính là những gì mà mô hình không thể giải thích được
+
+- Công việc của chúng ta là phân tích các tính năng này của tập dữ liệu time series và sau đó áp dụng mô hình để d ự đoán trong tương lai.
+
+- Trong mô hình ARIMA có 3 tham số được sử dụng để giúp mô hình hóa các khía cạnh chính của một chuỗi thời gian: seasonality, trend, và noise. Các tham số này được gắn nhãn lần lượt là p, d và q.
+
+p là tham số kết hợp với khía cạnh tự động hồi quy của mô hình (auto-regressive aspect - AR)
+
+d (difference): là tham số kết hợp với phần tích hợp của mô hình (integrated part- l)
+
+q: là tham số liên quan đến phần trung bình động của mô hình (moving average part - MA)
+
+**Dữ liệu theo stationary**
+
+Stationary data (dữ liệu tĩnh) là một chuỗi thời gian có các đặc tính thống kê như trung bình, phương sai, và hiệp phương sai không thay đổi theo thời gian. Nói cách khác, một chuỗi thời gian được gọi là tĩnh khi nó không có xu hướng rõ ràng (trend), không có yếu tố mùa vụ, và các biến động của nó ổn định qua thời gian. Trong bài toán ARIMA phải chuyển dữ liệu về stationary. 
+
+Đặc điểm của chuỗi thời gian tĩnh (Stationary):
+
+- Mean (trung bình) của chuỗi không nên là một hàm theo thời gian. dữ liệu dạng stationary là dữ liệu có mean không thay đổi theo thời gian.
+
+<img width="629" alt="Ảnh màn hình 2024-08-23 lúc 17 47 29" src="https://github.com/user-attachments/assets/1c803c57-52a9-4244-bac2-d57a9e72103e">
+
+- Variance (phương sai)  của chuỗi không nên là một hàm theo thời gian.
+
+<img width="593" alt="Ảnh màn hình 2024-08-23 lúc 17 49 01" src="https://github.com/user-attachments/assets/4a66dc2c-b49e-4d5a-af52-e07876a8bea0">
+
+-  Covariance (hiệp phương sai) của thời gian thứ i và thời gian thứ (i +m) không nên là một hàm theo thời gian.
+
+ <img width="593" alt="Ảnh màn hình 2024-08-23 lúc 17 50 17" src="https://github.com/user-attachments/assets/6e65d3cc-0f48-4445-83ee-6cf7e71c7572">
+
+### Time series decomposition (phân tích thành phần chuỗi thời gian)
+
+- là một kỹ thuật phân tích được sử dụng để tách một chuỗi thời gian thành các thành phần cơ bản để hiểu rõ hơn về các yếu tố ảnh hưởng đến chuỗi đó. Mục tiêu của phân tích này là để chia chuỗi thời gian thành các phần mà mỗi phần đại diện cho một yếu tố đặc trưng khác nhau của dữ liệu.
+
+**Các thành phần cơ bản của Time Series Decomposition:**
+
+- Trend
+
+- Seasonality
+
+- Cyclicity: Một chu kỳ xảy ra khi dữ liệu biểu hiện tăng và giảm không có tần số cố định. Những biến động này thường là do điều kiện kinh tế, và thường liên quan đến "business cycle". Thời gian của những biến động này thường tí nhất là 2 năm. (ví dụ: chu kì suy thoái kinh tế,..)
+
+-  Residuals: độ lỗi trong dự đoán, những thứ mà time series không giải thích được
+  
+<img width="868" alt="Ảnh màn hình 2024-08-23 lúc 18 01 27" src="https://github.com/user-attachments/assets/2fddae97-95e2-49f1-b6f5-2e0f385f4007">
+
+**Decomposition (phân tích)**
+
+- đây là kĩ thuật được dùng để phân tích xem dữ liệu của chúng ta thuộc Seasonality hay Cyclicity.
+
+- kỹ thuật này sẽ phân tích dữ liệu time series của chúng ta ra thành 3 phần: Trend (chuyển động lên hoặc xuống của đường cong dài hạn (long term), Seasonal component (thành phần theo mùa), Residuals
+
+- mô hình cộng (additive model): sự thay đổi tuyến tính
+
+- mô hình nhân (multiplicative model): sự thay đổi phi tuyến tính
+
+<img width="869" alt="Ảnh màn hình 2024-08-23 lúc 18 10 31" src="https://github.com/user-attachments/assets/8d4c7f0a-2b34-49b3-9853-1effb5a85a3e">
+
 ## 3. Áp dụng auto_arima xây dựng mô hình ARIMA
 
+**AIC (The Akaike information criterion):**
+
+- Giá trị AIC cho phép so sánh mô hình phù hợp với  dữ liệu và tính đến độ phức tạp của mô hình, vì vậy các mô hình phù hợp hơn trong khi sử dụng ít tính năng hơn sẽ nhận được điểm AIC tốt hơn (thấp hơn) các mô hình tương tự sử dụng nhiều tính năng hơn
