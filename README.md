@@ -1337,10 +1337,6 @@ https://www.capitalone.com/tech/machine-learning/understanding-arima-models/?aut
 
 https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 
-nếu muốn sửa lại thành dữ đoán nhiều loại sản phẩm cùng 1 lúc thì có thể sửa chỗ này trong notebook
-
-![Ảnh màn hình 2024-08-23 lúc 18 50 45](https://github.com/user-attachments/assets/529e2055-2253-4bc5-ae0b-220ac34ee0e1)
-
 **Recurrent neural network**
 
 - dạng rolling
@@ -1353,4 +1349,12 @@ nếu muốn sửa lại thành dữ đoán nhiều loại sản phẩm cùng 1 
 
 **DEMO LSTM**
 
-https://www.kaggle.com/code/ericle3121/time-series-analysis-using-lstm-keras/notebook
+https://www.kaggle.com/code/hongngcthuthng/time-series-analysis-using-lstm-keras?scriptVersionId=193734138
+
+nếu muốn sửa lại thành dữ đoán nhiều loại sản phẩm cùng 1 lúc thì có thể sửa chỗ này trong notebook
+
+![Ảnh màn hình 2024-08-23 lúc 18 50 45](https://github.com/user-attachments/assets/529e2055-2253-4bc5-ae0b-220ac34ee0e1)
+
+**Đề thi**
+
+https://pycaret.gitbook.io/docs/get-started/functions/analyze
