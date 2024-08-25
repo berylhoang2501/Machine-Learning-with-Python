@@ -1146,7 +1146,7 @@ CẤU TRÚC MẠNG NEURAL NETWORK
 
 - Các tình huống sau nên sử dụng Cross validation: khi dataset ít, khi muốn tìm ra hyperparameter tốt cho mô hình, benchmarking with less bias (Đánh giá hiệu suất mô hình với ít thiên lệch hơn)
 
-## 2. Grid Search (Grid Search CV)
+## 2. Grid Search (Grid Search CV) (Tìm kiếm bộ hyperparameters tối ưu cho mô hình)
 
 - Grid search nghĩa là có một tập hợp các mô hình khác nhau với các giá trị tham số của chúng, nằm trên một lưới. Những gì ta làm là đào tạo từng mô hình và đánh giá nó bằng cách sử dụng xác thực chéo. Sau đó chọn một mô hình thực hiện tốt nhất.
 
@@ -1170,21 +1170,13 @@ CẤU TRÚC MẠNG NEURAL NETWORK
 
 ![Ảnh màn hình 2024-08-25 lúc 13 40 14](https://github.com/user-attachments/assets/148ea3ca-16b7-423a-9ea8-389fd3c1b183)
 
+<img width="783" alt="Ảnh màn hình 2024-08-25 lúc 13 45 42" src="https://github.com/user-attachments/assets/ed06c1e7-d974-47b8-858b-b567a091bda2">
+
 https://stats.stackexchange.com/questions/259815/why-logarithmic-scale-for-hyper-parameter-optimization
 
 https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
 
-## 3. Random Search
-
-### K-fold cross-validation 
-
-**Ưu điểm**
-
-- có thể đánh giá trên toàn bộ dataset -> ưu việt hơn pp thông thường. 
-
-- tránh được sampling bias
-
-**Cách search ra bộ siêu tham số tốt nhất**
+**Cách search ra bộ siêu tham số tốt nhất (khắc phục những khuyết điểm của grid search CV**
 
 - Hyperclassifiers search
 
@@ -1196,11 +1188,23 @@ https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSe
 
 **Pycaret**
 
-https://pycaret.gitbook.io/docs
+- đây là kỹ thuật auto ML
+
+https://github.com/janhenner/HyperclassifierSearch
+
+[https://pycaret.gitbook.io/docs](https://pycaret.gitbook.io/docs/get-started/functions/train)
 
 https://colab.research.google.com/drive/1C7AbOA7L1gfopuFzPtlG3yCXt1UAuIjz?usp=sharing&authuser=1
 
 - low-code libery, đơn giản và dễ dùng hơn
+
+### Mở rộng: Sử dụng KNN để imputer 
+
+- Search KNN sklearn imputer: https://scikit-learn.org/stable/modules/generated/sklearn.impute.KNNImputer.html
+
+(có thể đọc thêm trong slide preprocessing)
+
+## 3. Random Search
 
 # Buổi học 10: Unsupervised Learning – Cluster Analysis - KMeans (16/08/2024)
 
