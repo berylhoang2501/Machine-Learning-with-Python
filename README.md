@@ -1122,7 +1122,61 @@ CẤU TRÚC MẠNG NEURAL NETWORK
 
 # Buổi học 9: Một số Kĩ Thuật bổ sung (11/08/2024)
 
-- Cross-validation là 1 pp đánh giá performance của mô hình
+- What makes a model (Features, Hyper-parameters, Loss)
+
+- Hyper-parameters phải xác định trước khi quá trình trainning bắt đầu. Những siêu tham số này sẽ ảnh hưởng trực tiếp đến performance của mô hình.
+
+## 1. Cross Validation (xác thực chéo)
+
+- Cross-validation là 1 pp đánh giá performance của mô hình. 
+
+**K-fold cross-validation**
+
+<img width="712" alt="Ảnh màn hình 2024-08-25 lúc 09 38 39" src="https://github.com/user-attachments/assets/5f0b0af8-c38e-4e4b-8e5d-eb452ca54e73">
+
+- Thay vì chia dữ liệu thành các tập huấn luyện và kiểm định riêng biệt, K-Fold Cross-Validation cho phép sử dụng toàn bộ dữ liệu để huấn luyện và kiểm định, giúp tận dụng tối đa dữ liệu hiện có. (chia thành các phần rồi đánh giá trên từng phần của bộ dữ liệu sau đó tính performance trung bình)
+
+- K-Fold Cross-Validation giúp tránh được sampling bias bằng cách chia dữ liệu thành nhiều phần nhỏ, đảm bảo rằng mọi mẫu dữ liệu đều được sử dụng cả trong quá trình huấn luyện và kiểm định. Bằng cách lấy trung bình kết quả của nhiều lần kiểm định khác nhau, phương pháp này giảm thiểu khả năng thiên lệch và cung cấp một đánh giá chính xác hơn về hiệu suất của mô hình trên toàn bộ dữ liệu.
+
+- k thường là 5, 10, 20
+ 
+- Leave-One-Out Cross-Validation (LOO-CV) là một kỹ thuật kiểm định chéo đặc biệt của K-Fold Cross-Validation, trong đó K bằng với số lượng mẫu dữ liệu có trong tập dữ liệu.
+
+- Cross-validation liên quan đến việc lựa chọn hyperparameter (tham số siêu việt) như sau: Khi bạn có nhiều bộ tham số siêu việt (hyperparameters) khác nhau, chẳng hạn như bộ tham số A và B, cross-validation được sử dụng để đánh giá xem bộ tham số nào hoạt động tốt hơn cho mô hình. 
+
+- Các tình huống sau nên sử dụng Cross validation: khi dataset ít, khi muốn tìm ra hyperparameter tốt cho mô hình, benchmarking with less bias (Đánh giá hiệu suất mô hình với ít thiên lệch hơn)
+
+## 2. Grid Search (Grid Search CV)
+
+- Grid search nghĩa là có một tập hợp các mô hình khác nhau với các giá trị tham số của chúng, nằm trên một lưới. Những gì ta làm là đào tạo từng mô hình và đánh giá nó bằng cách sử dụng xác thực chéo. Sau đó chọn một mô hình thực hiện tốt nhất.
+
+**Ví dụ**
+
+<img width="731" alt="Ảnh màn hình 2024-08-25 lúc 13 26 51" src="https://github.com/user-attachments/assets/e53a95bd-0e41-4f0e-a04a-164bdaf824d9">
+
+- GridSearchCV sẽ tạo ra tất cả các kết hợp có thể của các hyperparameters này. Trong trường hợp này, có 2 giá trị cho Criterion và 3 giá trị cho N_estimators, dẫn đến tổng cộng 2 x 3 = 6 kết hợp khác nhau. GridSearchCV sau đó sẽ huấn luyện mô hình trên mỗi tổ hợp này và sử dụng cross-validation để đánh giá hiệu suất của mô hình với từng tổ hợp hyperparameters.
+
+- Mục tiêu của GridSearchCV: Mục tiêu là tìm ra tổ hợp hyperparameters (trong trường hợp này là cặp giá trị của N_estimators và Criterion) cho kết quả tốt nhất dựa trên một metric đánh giá cụ thể. Sau khi GridSearchCV hoàn tất, nó sẽ trả về bộ hyperparameters tốt nhất (ví dụ: "gini", 100 hoặc "entropy", 50) và mô hình được huấn luyện với các tham số này có khả năng dự báo tốt nhất dựa trên dữ liệu và metric đánh giá của bạn.
+
+**Ưu điểm**
+
+- "Diệt nhằm còn hơn bỏ sót", nên thường được ưu tiên lựa chọn.
+
+**Khuyết điểm**
+
+- đối với các model cần lập nhiều parameter và nhiều giá trị thì việc tunning sẽ mất rất nhiều thời gian, hàng giờ, vài giờ thậm chỉ có thể tính bằng ngày.
+
+- cách chọn tham số cho N_estimators, thường thì các tham số sẽ để dưới dạng logaric scale. Vì
+
+![Ảnh màn hình 2024-08-25 lúc 13 40 14](https://github.com/user-attachments/assets/148ea3ca-16b7-423a-9ea8-389fd3c1b183)
+
+https://stats.stackexchange.com/questions/259815/why-logarithmic-scale-for-hyper-parameter-optimization
+
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
+
+## 3. Random Search
+
+### K-fold cross-validation 
 
 **Ưu điểm**
 
@@ -1358,3 +1412,19 @@ nếu muốn sửa lại thành dữ đoán nhiều loại sản phẩm cùng 1 
 **Đề thi**
 
 https://pycaret.gitbook.io/docs/get-started/functions/analyze
+
+# Buổi học 14: Accelerated machine learning (25/08/2024)
+
+## CPU-based
+
+- dựa trên package Py Spark. tổng hợp sức mạnh của nhiều máy tính 
+
+## GPU-based
+
+- 1 máy tính nhưng dùng GPU (VGA, card đồ hoạ) xử lý dữ liệu
+
+- GPU có thể xử lý dữ liệu dạng video và hình ảnh một cách rất dày đặc
+
+## Rapids AI 
+
+![Ảnh màn hình 2024-08-25 lúc 08 59 29](https://github.com/user-attachments/assets/d3214e0e-09cb-4c95-b638-230b781deb2b)
