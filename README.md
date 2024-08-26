@@ -1206,6 +1206,18 @@ https://colab.research.google.com/drive/1C7AbOA7L1gfopuFzPtlG3yCXt1UAuIjz?usp=sh
 
 ## 3. Random Search
 
+# Buổi học 10: Một số kỹ thuật bổ sung (tt) (16/08/2024)
+
+## DEMO: Introduction_to_HyperclassifierSearch
+
+- Ngoài các kiểu cross validation bình thường thì Hyperclassifier còn chô phép chúng ta dùng tất cả các kiẻu cross validation mà sklearn hỗ trợ
+
+https://scikit-learn.org/stable/api/sklearn.model_selection.html
+
+## DEMO: Introduction_to_pycaret
+
+https://pycaret.gitbook.io/docs
+
 # Buổi học 10: Unsupervised Learning – Cluster Analysis - KMeans (16/08/2024)
 
 https://people.revoledu.com/kardi/tutorial/Clustering/Numerical%20Example.htm?authuser=1
