@@ -1444,3 +1444,76 @@ https://pycaret.gitbook.io/docs/get-started/functions/analyze
 ## Rapids AI 
 
 ![Ảnh màn hình 2024-08-25 lúc 08 59 29](https://github.com/user-attachments/assets/d3214e0e-09cb-4c95-b638-230b781deb2b)
+
+# Buổi học 15: ECLAT + Apriori (26/08/2024)
+
+## ECLAT
+
+- Lược bỏ 1 số tính năng của Apriori, đổi lại kết quả nhanh hơn Apriori
+
+## Apriori
+
+- Là 1 bài toán con trong lĩnh vực Recommendation system.
+
+ **Recommendation system**
+
+- ví dụ: video suggestion (youtube), content suggestion (Amazon)
+
+- Thoả mãn 2 yếu tố: personalization, content related
+
+- Trong machine learning, có 2 cách để xây dựng RS: Collaborative Filtering (ưu tiên sự cá nhân hoá) vs Content-based Filtering (ưu tiên content related)
+
+## 1. Association Rule Mining 
+
+- Association rule mining (khai phá luật kết hợp) là một kỹ thuật để xác định mối quan hệ cơ bản giữa các item khác nhau.
+
+## 2. Giới thiệu Apriori
+
+- đây là bài toán bổ trợ cho Recommendation system, dùng Association Rule Mining để xác định mối tương tác giữa các sản phẩm (ví dụ khách hàng mua item A thì thường sẽ không mua item B)
+
+- Apriori dùng cho bài toán basket analysis (nhìn vô giỏ hàng của 1 user và tiến hành khảo sát xem có quy luật tương tác thuận nào không ví dụ khách hàng mua item A thì có khả năng rất lớn cũng sẽ mua item C) -> có thể đưa ra các chương trình khuyến mãi mua A tặng C, mua A cùng với C sẽ giảm giá
+
+- không có tính cá nhân hoá như Recommendation system mà chỉ dựa trên các quy luật kết hợp nên vẫn không thể thay thế được Recommendation system
+
+- Apriori được thiết kế để hoạt động trên các cơ sở dữ liệu chứa các giao dịch (transactional data base)
+
+**Các ứng dụng**
+
+<img width="909" alt="Ảnh màn hình 2024-08-26 lúc 19 10 23" src="https://github.com/user-attachments/assets/148aab4b-218b-4bb4-b218-2b5528ff8b41">
+
+<img width="894" alt="Ảnh màn hình 2024-08-26 lúc 19 10 35" src="https://github.com/user-attachments/assets/2acf3381-bbda-4c41-86a1-ef626e7a3872">
+
+## 3. Thuậttoán
+
+Có 3 thành phần chính của thuật toán Apriori:
+
+- Support: ví dụ Support(A) là số lượng giao dịch chứa sp A trên tổng giao dịch 
+- Confidence: đo lường khả năng nếu như khách hàng mua A thì sẽ mua B (tương tác thuận). 
+
+<img width="970" alt="Ảnh màn hình 2024-08-26 lúc 19 15 41" src="https://github.com/user-attachments/assets/c74c42ff-c959-454f-ab22-21f22ce44baa">
+
+- Lift: Lift(A >- B): đề cập đến sự gia tăng tỷ lệ bán B khi Ađược bán. (hữu hiệu trong việc bán chung 2 sản phẩm)
+
+<img width="841" alt="Ảnh màn hình 2024-08-26 lúc 19 19 32" src="https://github.com/user-attachments/assets/0cd608ec-fdd5-48d2-88a2-d70170e4fa96">
+
+Ngoài ra còn có: 
+
+- Leverage: đây là 1 metric đo tính độc lập giữa 2 sp
+
+- Conviction: thể hiện độ mạnh yếu của 1 quy luật
+
+<img width="972" alt="Ảnh màn hình 2024-08-26 lúc 19 27 05" src="https://github.com/user-attachments/assets/856a496a-9087-4bbf-a0ef-1b7d236c6f8f">
+
+https://www.geeksforgeeks.org/apriori-algorithm/
+
+## 4. Ưu/ khuyết điểm
+
+## 5. Xây dựng Apriori sử dụng mixtend
+
+
+
+
+
+
+
+
