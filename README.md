@@ -1224,6 +1224,12 @@ https://people.revoledu.com/kardi/tutorial/Clustering/Numerical%20Example.htm?au
 
 ## 1 Cluster Analysis 
 
+- cluser là cụm hoặc nhóm 
+
+- Xem dữ liệu là 1 điểm trong không gian và sẽ nhóm những điểm dữ liệu nào gần nhau về chung 1 nhóm. giống classìication nhưng khác ở chỗ data ở đây chưa được gắn nhãn
+
+- Assumption: Có mối qhe về mặt không gian hoặc về mặt cấu trúc giữa các mẫu chung 1 nhãn (đây là 1 khuyết điểm ví dụ đối với data dạng hình ảnh 2 hình con chó thì không thể khẳng định nó có liên hệ nào về mặt cấu trúc hay không gian)
+
 **Ví dụ**
 
 <img width="700" alt="Ảnh màn hình 2024-08-16 lúc 19 26 18" src="https://github.com/user-attachments/assets/ce1d4cfe-0582-4ef7-b0a0-8780f2aad8f7">
@@ -1231,6 +1237,24 @@ https://people.revoledu.com/kardi/tutorial/Clustering/Numerical%20Example.htm?au
 **Ghi chú: trong Cluster Analysis**
 
 -  Không có khái niệm cluster "đúng"/sai, chỉ có phù hợp hơn
+
+Độ phù hợp xét theo 2 tiêu chí 
+
+- tiêu chí a, b (elbow method)
+
+- có domain knowledge-> xét xem cách chia nào phù hợp với bài toán hơn
+
+- cách chia nào interpretable hơn (dễ giải thích hơn)
+
+**Cách tính khoảng cách**
+
+<img width="942" alt="Ảnh màn hình 2024-08-27 lúc 16 18 52" src="https://github.com/user-attachments/assets/60b9d120-a651-40c7-883b-b1a46b21d10d">
+
+**Sử dụng kết quả phân cụm**
+
+- phải giải thích ý nghĩa kết quả phân cụm thì khi đó kết quả của chúng ta mới có ý nghĩa trong việc decision making in business
+
+<img width="1066" alt="Ảnh màn hình 2024-08-27 lúc 17 12 01" src="https://github.com/user-attachments/assets/ad3a84bc-78d4-48ca-a282-c138e00ca651">
 
 **Một số thuật toán cluster**
 
@@ -1240,16 +1264,74 @@ https://people.revoledu.com/kardi/tutorial/Clustering/Numerical%20Example.htm?au
 
 ## 2. K-Means
 
+- K-Means là một thuật toán thuộc nhóm Unsupervised Learning.
+
+- Được sử dụng khi ta có dữ liệu không có nhãn
+
+<img width="1104" alt="Ảnh màn hình 2024-08-27 lúc 17 14 13" src="https://github.com/user-attachments/assets/c4136145-8510-4296-bd99-fea6636bfdc7">
+
+**Thuật toán kmeans thường có 3 bước lớn như sau**
+
+- b1: chọn k điểm bất kì trong dataset. k điểm này sẽ là tâm của k cụm.
+
+- b2: lặp đi lặp lại 2 bước sau
+
+a) lấy 1 điểm trong data set coi nó gần nhất với cái tâm nào -> gần điểm nào nhất thì 2 điểm đó nằm chung 1 nhóm. kết thúc bước này thì mỗi điểm trong dataset sẽ đc xác định nằm trong 1 điểm nào đó. 
+
+b) update tâm bằng cách lấy trung bình cộng của tất cả các điểm trong nhóm đó 
+
+- b3: lặp lại cho đến khi nào gặp điều kiện dừng
+
 **Điều kiện dừng**
 
-- iterations = 100
+- khi đạt được 1 số vòng lặp nào đó: iterations = 100
 
-- centroid << theshold (khi thay đổi quá ít thì sẽ tự động dừng**
+- khi tâm của cụm không thay đổi nữa hoặc sự thay đổi quá ít (bé hơn 1 hằng số nào đó). centroid << theshold (khi thay đổi quá ít thì sẽ tự động dừng)
 
-**Trong trường hợp k có domain knowledge**
+kmeans có cam kết là  Guaranteed to converge in a finite number of iterations.
 
-**Hard (Kmeans) vs Soft clusering (GMM)**
+**Ứng dụng**
 
+- K-Means for Segmentation
+
+- Vector quantization
+
+**Khuyết điểm**
+
+- vì ban đầu là chọn điểm random nên trong 1 số trường hợp có thể dẫn đến kết quả chia rất xấu. => k means quá nhạy với random ban đầu nên dễ dính vào local optimum mà k đạt đc global optimum
+
+![Ảnh màn hình 2024-08-27 lúc 17 37 38](https://github.com/user-attachments/assets/f267c8a7-e11b-45e7-a11a-e2b7d4d4c8b8)
+
+ví dụ có 2 tâm đc random quá gần nhau sẽ dẫn tới 2 cluser bị trộn lẫn vào nhau
+
+**Kmeans**
+
+https://www.geeksforgeeks.org/ml-k-means-algorithm/
+
+- b1: Randomly select the first centroid from the data points.
+
+- b2: For each data point compute its distance from the nearest, previously chosen centroid.
+
+- b3: Select the next centroid from the data points such that the probability of choosing a point as centroid is directly proportional to its distance from the nearest, previously chosen centroid. (i.e. the point having maximum distance from the nearest centroid is most likely to be selected next as a centroid)
+
+- b4: Repeat steps 2 and 3 until k centroids have been sampled
+
+**Chọn giá trị k như thế nào cho phù hợp**
+
+- tiêu chí a, b (elbow method)
+
+<img width="664" alt="Ảnh màn hình 2024-08-27 lúc 23 50 29" src="https://github.com/user-attachments/assets/7b26f01d-65d4-44c8-88ee-369fca946c16">
+
+- có domain knowledge-> xét xem cách chia nào phù hợp với bài toán hơn
+
+- cách chia nào interpretable hơn (dễ giải thích hơn)
+
+**Hard clusering (Kmeans) vs Soft clusering (GMM)**
+
+- Hard Clustering thường được sử dụng khi các cụm trong dữ liệu được phân biệt rõ ràng và các điểm dữ liệu chỉ thuộc về một cụm duy nhất. (vdu phân loại khách hàng trung thành)
+
+- Soft Clustering nên được sử dụng khi các cụm trong dữ liệu không phân biệt rõ ràng và một điểm dữ liệu có thể có mối quan hệ với nhiều cụm. Điều này thường xảy ra trong các bài toán như phân loại văn bản, phân tích hành vi người dùng, xe tự hành hoặc trong các bài toán mà các lớp không tách biệt hoàn toàn.
+  
 # Buổi học 11: Unsupervised Learning – Cluster Analysis - GMM (18/08/2024)
 
 https://www.analyticsvidhya.com/blog/2019/10/gaussian-mixture-models-clustering/
