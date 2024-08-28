@@ -1382,22 +1382,6 @@ https://www.analyticsvidhya.com/blog/2019/10/gaussian-mixture-models-clustering/
 
 # Buổi học 11: Unsupervised Learning - PCA (Principal ComponentAnalysis) (18/08/2024)
 
-## 1. Dimensionality 
-
-- hạn chế việc information loss nhất có thể khi giảm chiều dữ liệu
-
-## 2. Reduction
-
-## 3. Giới thiệu PCA
-
-## 4. Ưu/khuyết điểm
-
-## 5. Xây dựng PCA
-
-# Buổi học 12: Unsupervised Learning - PCA (Principal ComponentAnalysis) (21/08/2024) (tt)
-
-https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html
-
 - dùng trong dimensionality reduction (giảm chiều dữ liệu), visualization + cluser insight, nhận diện khuôn mặt eigent face (face id, định danh, chấm công), face matching (tìm danh tính 1 ngừoi trong kho thư viện danh tính)
 
 ## 1. Dimensionality Reduction (giảm chiều dữ liệu)
@@ -1434,6 +1418,10 @@ chặt chẽ giữa các biến tồn tại, nỗ lực giảm kích thước m�
 ## 3 Ưu/khuyết điểm 
 
 ## 4. Xây dựng PCA
+
+https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html
+
+# Buổi học 12: Unsupervised Learning - PCA (Principal ComponentAnalysis) (21/08/2024) (tt)
 
 ## DEMO: Solution 
 
