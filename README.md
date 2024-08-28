@@ -1419,13 +1419,19 @@ chặt chẽ giữa các biến tồn tại, nỗ lực giảm kích thước m�
 
 ## 4. Xây dựng PCA
 
-https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html
-
 # Buổi học 12: Unsupervised Learning - PCA (Principal ComponentAnalysis) (21/08/2024) (tt)
 
-## DEMO: Solution 
+https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
 
+https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html
+
+## DEMO: Solution (bài thi cũ của khoá Machine learning 
+
+- kỹ thuật kneed sẽ khắc phục được khuyết điểm của pp elbow -> giúp chúng ta lựa chọn theo 1 cách khoa học hơn
+
+- kỹ thuật silhouette score là
 ## DEMO 1: 
+
 ## What is shihoutte score?
 
 # Buổi học 12: Time Series Forecasting - ARIMA (21/08/2024)
