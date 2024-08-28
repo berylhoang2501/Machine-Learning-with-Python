@@ -1342,9 +1342,41 @@ https://www.analyticsvidhya.com/blog/2019/10/gaussian-mixture-models-clustering/
 
 ## 3. Mô hình Gaussian hỗn hợp (GMM)
 
+![Ảnh màn hình 2024-08-28 lúc 11 55 24](https://github.com/user-attachments/assets/26777365-21a6-48a5-b5e2-fe5725a58d36)
+
+- Giả sử bạn có một tập hợp dữ liệu về chiều cao và bạn không biết rằng dữ liệu này thực sự gồm hai nhóm: nam và nữ. GMM sẽ giúp bạn phát hiện ra rằng dữ liệu có thể được mô tả bằng hai phân phối Gaussian khác nhau, một cho nam và một cho nữ. Sau đó, nó sẽ tính toán các tham số của các phân phối này và xác định xác suất mà mỗi chiều cao thuộc về nam hay nữ.
+
 ## 4. Thuật toán EM (Kỳ vọng - Cực đại)
 
+- GMM sử dụng thuật toán EM để ước lượng các tham số (mean và standard deviation) của các phân phối Gaussian.
+
+- pi thể hiện 1 gausian chứa nhiều điểm hay ít điểm (độ quan trọng của 1 cluster)
+
+ví dụ pi1 40% + pi2 60% = 1 => ta có thể nói có 60% điểm đó thuộc cluster pi2
+
+<img width="867" alt="Ảnh màn hình 2024-08-28 lúc 12 16 10" src="https://github.com/user-attachments/assets/c9f2c08e-643b-47e4-97c0-20e91c9b8442">
+
+<img width="784" alt="Ảnh màn hình 2024-08-28 lúc 12 17 12" src="https://github.com/user-attachments/assets/56d9de6a-4e2b-465a-ad53-5f2dc9d676ed">
+
+Thuật toán EM lặp lại 3 bước:
+
+- B1: khởi tạo random 3 giá trị trong từng gaussian
+ 
+- Bước Expectation (E): Tính toán xác suất mà mỗi điểm dữ liệu thuộc về mỗi phân phối Gaussian.
+
+- Bước Maximization (M): Dựa trên những xác suất đó, cập nhật các tham số của các phân phối Gaussian để cải thiện mô hình.
+
+https://www.analyticsvidhya.com/blog/2019/10/gaussian-mixture-models-clustering/
+
 ## 5. Ưu/khuyết điểm
+
+**Ưu điểm**
+
+<img width="642" alt="Ảnh màn hình 2024-08-28 lúc 12 28 48" src="https://github.com/user-attachments/assets/ca2ff3e1-2f9c-4561-8082-6c6763ac4aca">
+
+**Khuyết điểm**
+
+![Ảnh màn hình 2024-08-28 lúc 12 29 30](https://github.com/user-attachments/assets/b38b96d5-098b-442f-a3ac-e6791f354560)
 
 ## 6. Xây dựng GMM
 
@@ -1365,6 +1397,43 @@ https://www.analyticsvidhya.com/blog/2019/10/gaussian-mixture-models-clustering/
 # Buổi học 12: Unsupervised Learning - PCA (Principal ComponentAnalysis) (21/08/2024) (tt)
 
 https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html
+
+- dùng trong dimensionality reduction (giảm chiều dữ liệu), visualization + cluser insight, nhận diện khuôn mặt eigent face (face id, định danh, chấm công), face matching (tìm danh tính 1 ngừoi trong kho thư viện danh tính)
+
+## 1. Dimensionality Reduction (giảm chiều dữ liệu)
+
+**Phân loại**
+
+- Projection (phép chiếu) 
+
+Nhưng Projection (phép chiếu) không phải là một cách tiếp cận tốt để dimensionality reduction.
+
+- Manifold
+
+<img width="706" alt="Ảnh màn hình 2024-08-28 lúc 13 00 42" src="https://github.com/user-attachments/assets/5fbcfb88-fc61-4706-9df5-b18c1d33819e">
+
+## 2. Giới thiệu PCA (Principal Component Analysis),
+
+- PCA sẽ hạn chế việc information loss xảy ra khi giảm chiều dữ liệu (giữ lại nhiều thông tin nhất)
+
+- Mục tiêu chính của phân tích PCA là xác định các mẫu trong dữ liệu; PCA giúp phát hiện mối tương quan giữa các biến. Nếu có mối tương quan
+chặt chẽ giữa các biến tồn tại, nỗ lực giảm kích thước mới có ý nghĩa.
+
+- Trong PCA, lượng thông tin được giữ lại sẽ tỷ lệ thuận với đại lượng variance
+
+- PCA tìm kiếm các phương hướng (principal components) trong không gian nhiều chiều mà theo đó sự biến thiên của dữ liệu là lớn nhất (maximum variance). Những phương hướng này đại diện cho các tổ hợp tuyến tính của các biến gốc. PCA sau đó sẽ giữ lại một số ít các phương hướng chính này (các thành phần chính) để thay thế cho các biến gốc, từ đó giảm số chiều của dữ liệu.
+
+- PCA giúp giữ lại những thông tin quan trọng nhất từ dữ liệu bằng cách loại bỏ các chiều không cần thiết, giúp cho việc học máy trở nên hiệu quả hơn.
+
+- ví dụ không gian ban đầu là 15 chiều, tôi muốn giảm về kgian 3 chiều -> pca tính ma trận S covariance matrix -> sau đó tìm tất cả các eigent vector có thể có của ma trận S -> 3 chiều tương ứng với 3 trục toạ độ nên sẽ tiến hành chọn eigent vector nào giữ lại đc nhiều value nhất. Lượng thông tin đc giữ lại đc tính bằng cách lấy tổng 3 eigent value đó/tất cả các giá trị eigent value cộng lại với nhau. 
+
+- dữ liệu -> tính ma trận hiệp phương sai -> muốn giảm về k chiều -> tìm k eigent vector của ma trận đó
+
+- mỗi eigent vector sẽ có eigent value tương ứng. chọn eigent vector tốt nhất bằng cách chọn xem eigent vector nào giữ lại đc nhiều value nhất. 
+
+## 3 Ưu/khuyết điểm 
+
+## 4. Xây dựng PCA
 
 ## DEMO: Solution 
 
