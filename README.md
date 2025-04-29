@@ -747,6 +747,8 @@ https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.
 
 <img width="455" alt="Ảnh màn hình 2024-08-08 lúc 10 34 00" src="https://github.com/user-attachments/assets/b5a3fbec-37aa-4878-814a-39b1dfbee864"> <img width="452" alt="Ảnh màn hình 2024-08-08 lúc 10 34 10" src="https://github.com/user-attachments/assets/ce13f325-64e3-4f80-9176-6b23410e72e8">
 
+Lưu ý: Nên chia dữ liệu thành tập train và test trước. Chỉ áp dụng SMOTE trên tập train để tạo ra các mẫu tổng hợp cho lớp thiểu số (minority class). Tập test giữ nguyên, không bị ảnh hưởng bởi SMOTE. Điều này đảm bảo rằng tập test là một tập dữ liệu "sạch", không bị tác động bởi bất kỳ kỹ thuật tiền xử lý nào dựa trên tập train.
+
 # Buổi học 7: Supervised Learning - SVM (9/08/2024)
 
 ## 1. Giới thiệu
